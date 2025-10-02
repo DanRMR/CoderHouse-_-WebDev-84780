@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn English Hub</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
+
 <body>
     <header>
+        <!-- Navbar -->
         <nav class="navbar">
+
+            <input type="checkbox" id="sidebar-active" />
+            <label for="sidebar-active"></label>
+
+            <div class="nav-logo" for="sidebar-active">
+                <img src="/img/Logo-no-background.png" class="logo" alt="logo"><a href="index.html">
+            </div>
+
             <div>
-                <div class="navdiv"><img class="logo" alt="logo"><a href="index.html">Learn English Hub</a>
-                </div>
                 <ul>
                     <li><a href="systems.html">Language Systems</a></li>
                     <li><a href="skills.html">English Skills</a></li>
                     <li><a href="recursos.html">Recursos y Herramientas</a></li>
                     <li><a href="autoevaluacion.html">Auto-evaluación</a></li>
                 </ul>
+
                 <div class="x-icon"><img src="" alt="X icon"></div>
+
             </div>
+
         </nav>
+
+
+
     </header>
 
     <main>
         <h1>Learn English Hub</h1>
-        <img src="" alt="banner home">
-        
+        <img src="/img/Banner Home.png" alt="banner home">
+
         <div>
             <h3>Bienvenidos</h3>
-            <p>Este sitio es un recurso gratuito para quienes quieren aprender inglés de forma autodidáctica o complementaria a sus estudios actuales del idioma.</p> 
-            <p>Es una guía organizada por habilidades (skills) y sistemas del idioma (systems), con ejemplos simples, recursos confiables y explicaciones claras.</p>
+            <p>Este sitio es un recurso gratuito para quienes quieren aprender inglés de forma autodidáctica o
+                complementaria a sus estudios actuales del idioma.</p>
+            <p>Es una guía organizada por habilidades (skills) y sistemas del idioma (systems), con ejemplos simples,
+                recursos confiables y explicaciones claras.</p>
         </div>
         <div>
             <h3>¿Para quién es este sitio?</h3>
             <ul>
                 <li>Quienes empiezan desde cero y no saben por donde comenzar</li>
                 <li>Estudiantes de A1 a C1 que necesitan una estructura clara y práctica</li>
-                <li>Personas que no pueden pagar un curso pero sí pueden aprender con guía y constancia</li>
+                <li>Personas que no pueden pagar un curso pero sí pueden aprender por cuenta propia con guía y
+                    constancia</li>
                 <li>Profesores que quieran recomendar recursos a sus alumnos</li>
             </ul>
         </div>
@@ -53,17 +78,17 @@
                     <summary class="dropdown-h2">LANGUAGE SYSTEMS</summary>
 
                     <div class="portada">
-                        <img  src="/img/vocabulary.png" alt="thumbnail-vocabulary">
+                        <img src="/img/vocabulary.png" alt="thumbnail-vocabulary">
                         <h4>Vocabulary</h4>
                     </div>
                     <div class="portada">
-                            <img src="/img/Pronunciation.png" alt="thumbnail-pronunciation">
-                            <h4>Pronunciation</h4>
+                        <img src="/img/Pronunciation.png" alt="thumbnail-pronunciation">
+                        <h4>Pronunciation</h4>
                     </div>
                     <div class="portada">
-                            <img src="/img/Grammar.png" alt="thumbnail-grammar">
-                            <h4>Grammar</h4>
-                        </div>   
+                        <img src="/img/Grammar.png" alt="thumbnail-grammar">
+                        <h4>Grammar</h4>
+                    </div>
                 </details>
             </div>
         </section>
@@ -72,23 +97,23 @@
             <div>
                 <details>
                     <summary class="dropdown-h2">ENGLISH SKILLS</summary>
-                
-                <div class="portada">
-                    <img src="/img/Reading.png" alt="thumbnail-reading">
-                    <h4>Reading</h4>    
-                </div>
-                <div class="portada">
-                    <img src="/img/Listening.png" alt="thumbnail-listening">
-                    <h4>Listening</h4>
-                </div>
-                <div class="portada">
-                    <img src="/img/Speaking.png" alt="thumbnail-speaking">
-                    <h4>Speaking</h4>
-                </div>
-                <div class="portada">
-                    <img src="/img/Writing.png" alt="thumbnail-writing">
-                    <h4>Writing</h4>
-                </div>
+
+                    <div class="portada">
+                        <img src="/img/Reading.png" alt="thumbnail-reading">
+                        <h4>Reading</h4>
+                    </div>
+                    <div class="portada">
+                        <img src="/img/Listening.png" alt="thumbnail-listening">
+                        <h4>Listening</h4>
+                    </div>
+                    <div class="portada">
+                        <img src="/img/Speaking.png" alt="thumbnail-speaking">
+                        <h4>Speaking</h4>
+                    </div>
+                    <div class="portada">
+                        <img src="/img/Writing.png" alt="thumbnail-writing">
+                        <h4>Writing</h4>
+                    </div>
                 </details>
             </div>
         </section>
@@ -122,20 +147,23 @@
         <section class="acento">
             <div>
                 <h3>Sobre el autor</h3>
-                <p>Mi nombre es Daniel Molina y me apasiona aprender idiomas. Creé este sitio con el deseo de ayudar a otros hispanohablantes a aprender inglés y así abrirse a un mundo de nuevas oportunidades: laborales, académicas, amorosas, de viaje y mucho más.</p>
-                
-                <p>Este proyecto nació de una necesidad personal. Cuando empecé a aprender inglés, me habría encantado tener un recurso como este: claro, ordenado, sin distracciones, y accesible para autodidactas.</p>
-                
-                <p>No me considero una autoridad en el idioma. Al contrario: sigo aprendiendo todos los días. Mi nivel actual ni siquiera llega al C2, mucho menos a un nivel nativo. Pero eso no me detiene. Soy un estudiante más, simplemente compartiendo lo que me ha servido.</p>
-                
-                <p>Mi intención es que este proyecto evolucione con el tiempo y que, con el aporte de otros estudiantes construyamos juntos una comunidad sólida de aprendizaje.</p>
+                <p>Soy Daniel Molina, apasionado por los idiomas y el aprendizaje autodidacta. Creé este sitio porque,
+                    cuando empecé a aprender inglés, me habría encantado tener un recurso así: claro, ordenado y sin
+                    distracciones</p>
+
+                <p>No soy un experto, sigo aprendiendo cada día. Pero quiero compartir lo que me ha funcionado.</p>
+
+                <p>Mi sueño es que este espacio crezca con el aporte de todos, y que juntos construyamos una comunidad
+                    sólida para aprender inglés desde cero, con pasión y constancia.</p>
+
             </div>
         </section>
 
     </main>
     <footer>
-        <p>© 2025 Learn English Hub </p>    
+        <p>© 2025 Learn English Hub </p>
         <p><b>Coderhouse: PreEntrega1 — Molina Rubio</b></p>
     </footer>
 </body>
+
 </html>

@@ -20,18 +20,22 @@ body {
     color: var(--text);
 }
 
-ul {
+/* ul {
     margin-left: 3rem;
 }
 
 ol {
     margin-left: 3rem;
 }
-
+ */
 header {
 
     .navbar {
         background-color: var(--acento);
+
+        img {
+            height: 50px;
+        }
 
         ul {
             list-style: none;

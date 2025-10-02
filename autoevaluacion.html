@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn English Hub</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
 
 <body>
@@ -26,7 +30,7 @@
     </header>
     <main>
         <h1>Auto-evaluación</h1>
-        <div class="banner-autoeval"><img src="" alt="banner-autoevaluación"></div>
+        <div class="banner-autoeval"><img src="/img/Banner Autoevaluación.png" alt="banner-autoevaluación"></div>
 
         <p>Este formulario te ayudará a estimar tu nivel general de inglés según el Marco Común Europeo de Referencia
             (CEFR). Está dividido en secciones que evalúan: <b>Gramática, Vocabulario, Comprensión Lectora y
@@ -49,7 +53,7 @@
         <section>
             <div class="autoeval">
 
-
+                <!-- Dropdown del Quiz -->
                 <details>
                     <summary class="dropdown-h2">Assessment Quiz</summary>
 
@@ -57,19 +61,22 @@
 
                         <form action="#" method="post"></form>
 
+                        <!-- GRAMMAR -->
                         <details>
                             <summary class="dropdown-h3">SECTION 1: GRAMMAR (10 preguntas)</summary>
 
                             <fieldset>
                                 <legend>Level A1</legend>
+
                                 <div>
                                     <h4>Question 1</h4>
                                     <p><b>CEFR – Lo que deberías ser capaz de hacer:</b> Usar el presente simple de
                                         verbos comunes para hablar de rutinas diarias.</p>
 
-                                    <label for="">Choose the correct one</label>
+                                    <label for="q1">Choose the correct one</label>
+
                                     <p><b>What time</b>
-                                        <select name="" id="">
+                                        <select name="" id="q1">
                                             <option value="">——</option>
                                             <option value="do">do</option>
                                             <option value="are">are</option>
@@ -78,7 +85,6 @@
                                         </select>
                                         <b> you usually wake up?</b>
                                     </p>
-
 
                                 </div>
                                 <hr>
@@ -91,10 +97,10 @@
 
                                     <p><b>_____ you like ice cream?</b></p>
 
-                                    <label><input type="radio" name="q1" value="do">do</label>
-                                    <label><input type="radio" name="q1" value="are">are</label>
-                                    <label><input type="radio" name="q1" value="is">is</label>
-                                    <label><input type="radio" name="q1" value="did">did</label>
+                                    <label><input type="radio" name="q2" value="do">do</label>
+                                    <label><input type="radio" name="q2" value="are">are</label>
+                                    <label><input type="radio" name="q2" value="is">is</label>
+                                    <label><input type="radio" name="q2" value="did">did</label>
 
                                 </div>
                             </fieldset>
@@ -250,12 +256,56 @@
                             </fieldset>
 
                         </details>
+
+                        <!-- VOCABULARY -->
                         <details>
                             <summary class="dropdown-h3">SECTION 2: VOCABULARY (8 preguntas)</summary>
+
+                            <p>Elige la respuesta correcta según el contexto. Algunas preguntas te piden encontrar
+                                sinónimos, otras completar con la palabra adecuada, o identificar combinaciones
+                                correctas de palabras (collocations).</p>
+
+                            <fieldset>
+                                <legend>Level A1</legend>
+                                <div>
+                                    <h4>Question 11</h4>
+                                    <p><b>CEFR - Lo que deberías ser capaz de hacer:</b> Reconocer vocabulario básico sobre emociones.</p>
+                                    <p>Choose the correct one</p>
+                                    <p><b>He must _______ at the office now</b></p>
+                                    <label><input name="q11" type="radio">is</label>
+                                    <label><input name="q11" type="radio">be</label>
+                                    <label><input name="q11" type="radio">being</label>
+                                    <label><input name="q11" type="radio">been</label>
+                                </div>
+                                <hr>
+                                <div>
+                                    <h4>Question 12</h4>
+                                    <p><b>CEFR - Lo que deberías ser capaz de hacer:</b> Usar bojectivos comunes
+                                        relacionados con intereses</p>
+                                    <label for="q11">Choose the correct one</label>
+                                    <p><b>He is really </b>
+                                        <select name="" id="q11">
+                                            <option value="">——</option>
+                                            <option value="interest">interest</option>
+                                            <option value="interesting">interesting</option>
+                                            <option value="interested">interested</option>
+                                            <option value="interests">interests/</option>
+                                        </select> in learing
+                                    </p>
+                                </div>
+                            </fieldset>
+
+
+
+
                         </details>
+
+                        <!-- READING -->
                         <details>
                             <summary class="dropdown-h3">SECTION 3: READING (8 preguntas)</summary>
                         </details>
+
+                        <!-- AUTOPERCEPCIÓN -->
                         <details>
                             <summary class="dropdown-h3">SECTION 4: AUTOPERCEPCIÓN (4 preguntas)</summary>
                         </details>
@@ -283,9 +333,9 @@
                         <p><b>Grammar</b></p>
                         <label> Preguntas: 8 <br> Acertaste: <input type="text"></label>
                         <p><b>Vocabulary</b></p>
-                        <label> Preguntas: 8  <br>  Acertaste: <input type="text"></label>
+                        <label> Preguntas: 8 <br> Acertaste: <input type="text"></label>
                         <p><b>Reading</b></p>
-                        <label> Preguntas: 8  <br> Acertaste: <input type="text"></label>
+                        <label> Preguntas: 8 <br> Acertaste: <input type="text"></label>
                         <p><b>Autopercepción</b></p>
                         <p>Preguntas: 4 <br> No hay preguntas correctas o incorrecttas</p>
                     </fieldset>
