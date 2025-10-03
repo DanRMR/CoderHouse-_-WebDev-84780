@@ -25,29 +25,28 @@
                 <img class="logo" src="/img/Logo-no-background.png" alt="logo">
             </a>
 
-            <div class="navdiv">    
+            <input class="checkbox" type="checkbox" id="navbar-active" />
 
-                <!-- icono menú | hamburguesa -->
-                <input class="checkbox" type="checkbox" id="navbar-active" />
-                <label class="hamburger-icon" for="navbar-active">☰</label>
+            <!-- icono menú | hamburguesa -->
+            <label class="open-navbar-icon" for="navbar-active">☰</label>
 
-                <!-- Icono para cerrar el navegador en dispositivos pequeños -->
-                <label class="close-navbar-button" for="navbar-active">✕</label>
+            <!-- para que se desactive el navbar si damos click fuera -->
+            <label for="navbar-active" id="overlay"></label>
 
-                <!-- Links a otras páginas -->
-                <div class="navlinks">
+            <!-- Links a otras páginas -->
+            <div class="navlinks">
 
-                    <ul>
-                        <li><a href="systems.html">Language Systems</a></li>
-                        <li><a href="skills.html">English Skills</a></li>
-                        <li><a href="recursos.html">Recursos y Herramientas</a></li>
-                        <li><a href="autoevaluacion.html">Auto-evaluación</a></li>
-                    </ul>
+                <ul>
+                    <!-- Icono para cerrar el navegador en dispositivos pequeños -->
+                    <label class="close-navbar-icon" for="navbar-active">✕</label>
+                    <li><a href="systems.html">Language Systems</a></li>
+                    <li><a href="skills.html">English Skills</a></li>
+                    <li><a href="recursos.html">Recursos y Herramientas</a></li>
+                    <li><a href="autoevaluacion.html">Auto-evaluación</a></li>
+                </ul>
 
-                </div>
             </div>
         </nav>
-
     </header>
 
     <main>
