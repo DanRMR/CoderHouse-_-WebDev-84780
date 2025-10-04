@@ -1,5 +1,5 @@
 :root {
-    --primario: #0FB9CB;
+    --primario: #0A998D; /*  -- #0FB9CB*/
     --acento: #b6f3f1;
     --contraste: #F16A70;
     --fondo: #fff;
@@ -20,14 +20,14 @@ body {
     color: var(--text);
 }
 
+
+/* NAVBAR */
 header {
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
-}
-
-/* NAVBAR */
+} 
 .navbar {
     display: flex;
     align-content: center;
@@ -37,7 +37,7 @@ header {
 }
 
 .logo {
-    height: 60px;
+    height: 50px;
     display: block;
 }
 
@@ -83,7 +83,7 @@ header {
 }
 
 .navlinks a {
-    font-size: 1.15em;
+    font-size: 1.1em;
     color: var(--text);
     text-decoration: none;
     font-weight: 500;
@@ -97,24 +97,33 @@ header {
 }
 
 
+/* MAIN */
 
-
-main {
-    margin-left: clamp(1rem, 5vw, 100px);
-    margin-right: clamp(1rem, 5vw, 100px);
-
-
-    h1 {
-        text-align: center;
-    }
-
-    p {
-        margin: .5rem;
-    }
+main  {
+    margin: 0;
+/*     margin-left: clamp(1rem, 5vw, 100px);
+    margin-right: clamp(1rem, 5vw, 100px); */
 }
 
-.banner-home {
+main h1 {
+    text-align: center;
+    margin: .75em;
+    color: var(--primario);
+    font-weight: bolder;
+}
+
+main p {
+    margin: .5rem;
+}
+
+.banner  {
+}
+
+.banner-img {
+    display: block;
+    object-fit: cover;
     width: 100%;
+    height: 400px;
 }
 
 .portada,
@@ -152,7 +161,7 @@ main {
     background-color: rgb(236, 235, 233);
 }
 
-.acento {
+aside {
     background-color: var(--acento);
 }
 
@@ -165,14 +174,14 @@ footer {
 
 
 /* MEDIA QUERIES */
-@media (max-width: 1048px) {
+@media (max-width: 999px) {
     .navbar {
         display: flex;
         align-content: center;
         position: sticky;
         top: 0;
         background-color: var(--acento);
-        padding: 1em 2em;
+        padding: 1em 0.5em;
         flex-direction: column;
     }
 
@@ -182,7 +191,7 @@ footer {
 }
 
 
-@media (max-width: 864px) {
+@media (max-width: 768px) {
     .navbar {
         display: flex;
         align-content: center;
@@ -226,20 +235,18 @@ footer {
         z-index: 51;
         padding: 0;
         top: 0;
-        right: -100%;
+        right: -200%;
         background-color: var(--primario);
         height: 100%;
         border-left: 6px solid var(--acento);
     }
 
-    .navlinks li {
-        margin-bottom: 1em;
-    }
-
     .navlinks a {
         display: inline-block;
         width: 300px;
-        padding: 16px 2em;
+        padding: 20px 2em;
+        color: var(--fondo);
+        font-size: 1.2em;
     }
 
     .navlinks a:hover {
