@@ -96,6 +96,11 @@ header {
 .navlinks a:hover {
     background-color: var(--primario);
     color: var(--fondo);
+    transition: 0.1s ease;
+}
+
+.navlinks a:active {
+    background-color: var(--contraste);
 }
 
 
@@ -136,6 +141,7 @@ header {
 .dropdown {
     background-color: var(--gris-claro);
     margin: 2em 0;
+    
 }
 
 .dropdown .dropdown-content {
@@ -153,11 +159,22 @@ header {
     color: var(--fondo);
 }
 
+/* --- PORTADAS ----- */
+
+.portadas {
+    background-color: var(--gris-claro);
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    height: auto;
+    padding: 1em;
+}
+
 .portada {
     display: inline-block;
     background-color: var(--acento);
-    width: 25 0px;
-
+    width: 350px;
+    height: 100%;
 }
 
 .portada img {
@@ -229,7 +246,7 @@ footer {
 /* MEDIA QUERIES */
 
 @media (max-width: 992px) {
-    .layout section {
+    .layout > section {
         padding: 0 6vw;
     }
 
