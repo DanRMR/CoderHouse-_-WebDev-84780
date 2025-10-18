@@ -18,44 +18,89 @@
 <body>
     <header>
         <!-- Navbar -->
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
 
-            <!-- logo -->
-            <a href="index.html">
-                <img class="logo" src="/img/Logo-no-background.png" alt="logo">
-            </a>
+                <a class="navbar-brand" href="./index.html"> <img src="./img/Logo-no-background.png" alt="logo" class="logo"> </a>
 
-            <input class="checkbox" type="checkbox" id="navbar-active" />
+                <!-- hamburger button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- icono menú | hamburguesa -->
-            <label class="open-navbar-icon" for="navbar-active">☰</label>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
 
-            <!-- para que se desactive el navbar si damos click fuera -->
-            <label for="navbar-active" id="overlay"></label>
+                    <!-- X button -->
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
 
-            <!-- Links a otras páginas -->
-            <div class="navlinks">
+                    <!-- links  -->
+                    <div class="offcanvas-body">
 
-                <ul>
-                    <!-- Icono para cerrar el navegador en dispositivos pequeños -->
-                    <label class="close-navbar-icon" for="navbar-active">✕</label>
-                    <li><a href="systems.html">Language Systems</a></li>
-                    <li><a href="skills.html">English Skills</a></li>
-                    <li><a href="recursos.html">Recursos y Herramientas</a></li>
-                    <li><a href="autoevaluacion.html">Auto-evaluación</a></li>
-                </ul>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                            
+                            <!-- Dropdown de Systems -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="./systems.html" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Language Systems
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./systems.html#pronunciation">Pronunciation</a></li>
+                                    <li><a class="dropdown-item" href="./systems.html#vocabulary">Vocabulary</a></li>
+                                    <li><a class="dropdown-item" href="./systems.html#grammar">Grammar</a></li>
+                                </ul>
+                            </li>
+                            <!-- Dropdwon de Skills  -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="./skills.html" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    English Skills
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <h6 class="skills-receptive">Receptive Skills</h6>
+                                    <li><a class="dropdown-item" href="./skills.html#listening">Listening</a></li>
+                                    <li><a class="dropdown-item" href="./skills.html#reading">Reading</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <h6 class="skills-receptive">Productive Skills</h6>
+                                    <li><a class="dropdown-item" href="./skills.html#speaking">Speaking</a></li>
+                                    <li><a class="dropdown-item" href="./skills.html#writing">Writing</a></li>
+                                </ul>
+                            </li>
 
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./recursos.html">Recursos</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./autoevaluacion.html">Auto-evaluación</a>
+                            </li>
+
+                        </ul>
+
+                        <!-- search bar -->
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <main class="container-fluid">
         <div class="row">
-            <div class="layout col-lg-8 offset-2">
+            <div class="layout col">
 
 
                 <h1>Auto-evaluación</h1>
-                <div class="banner"><img class="banner-img" src="/img/Banner Autoevaluación.png"
+                <div class="banner"><img class="banner-img" src="./img/Banner Autoevaluación.png"
                         alt="banner-autoevaluación"></div>
 
                 <p>Este formulario te ayudará a estimar tu nivel general de inglés según el Marco Común Europeo de
@@ -534,7 +579,7 @@
     </main>
     <footer>
         <p>© 2025 Learn English Hub </p>
-        <p><b>Coderhouse: PreEntrega1 — Molina Rubio</b></p>
+        <p><b>Coderhouse: Entrega 3 — Molina Rubio</b></p>
     </footer>
 </body>
 

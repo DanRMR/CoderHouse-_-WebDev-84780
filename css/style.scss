@@ -1,0 +1,238 @@
+$clr-primario: #0A998D;
+$clr-acento: #b6f3f1;
+$clr-contraste: #F16A70;
+$clr-fondo: #fff;
+$clr-texto: #1F2A37;
+$clr-gris-claro: #cbcbcb;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        .navbar {
+            background-color: $clr-acento;
+    
+    
+            .logo {
+                height: 45px;
+                display: block;
+                background-color: #b6f3f1;
+            }
+    
+            /* hamburger button */
+            button.navbar-toggler {
+                border: none;
+                font-size: 1.3em;
+            }
+    
+            /* navbar desplegable */
+            .offcanvas {
+                background-color: $clr-primario;
+    
+                /* boton de X */
+                .offcanvas-header {
+    
+                    .btn-close {
+                        font-size: 1.3em;
+                        color: $clr-fondo;
+                        margin-top: 5px;
+                        margin-right: 5px;
+                    }
+                }
+    
+                /* Links */
+                .offcanvas-body {
+                    padding: 0;
+    
+                    ul.navbar-nav {
+                        margin-bottom: 2em;
+                        
+                        li.nav-item {
+                            
+                            a {
+                                font-size: 1.3em;
+                                padding: .6em 2em;
+                                color: $clr-fondo;
+                                font-weight: 500;
+                            }
+                            
+
+                            a:hover {
+                                background-color: rgba($color: $clr-acento, $alpha: 0.5);
+                                color: $clr-texto;
+                                transition: 0.1s ease;
+                            }
+                            a:active {
+                                color: $clr-primario;
+                                background-color: $clr-acento;
+                                color: $clr-texto;
+                            }
+    
+                            /* Links con Dropdown */
+                            .dropdown-menu {
+                                margin: .5em 2em;
+                                padding: 2px;
+                                background-color: $clr-primario;
+                                border: 1px solid $clr-acento;
+    
+                                h6 {
+                                    font-size: 1.2em;
+                                    color: $clr-acento;
+                                    text-align: center;
+                                    margin: 5px;
+                                }
+    
+                                li {
+                                    margin: 0;
+                                    background-color: $clr-primario;
+    
+                                    .dropdown-divider {
+                                        background-color: $clr-acento;
+                                        /* border: 0.5px solid $clr-acento; */
+                                    }
+    
+                                    a.dropdown-item {
+                                        color: $clr-fondo;
+                                    }
+    
+                                    a.dropdown-item:hover {
+                                        background-color: rgba($color: $clr-acento, $alpha: 0.5);
+                                color: $clr-texto;
+                                        color: $clr-texto;
+                                    }
+
+                                    a.dropdown-item:active {
+                                        background-color: $clr-acento;
+                                    }
+    
+                                }
+                            }
+                        }
+                    }
+    
+                    form.d-flex {
+                        margin: 0 2em;
+                        /* height: 2.5em; */
+    
+                        .btn-outline-success {
+                            background-color: $clr-contraste;
+                            color: $clr-fondo;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Navbar */
+
+
+    main {
+        /* Sección Principal */
+
+        h1 {
+            text-align: center;
+            color: $clr-primario;
+            font-weight: bolder;
+            margin: .8em;
+        }
+
+        .banner {
+            margin-bottom: 1.5em;
+
+            .banner-img {
+                object-fit: cover;
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+
+        /* Sobre el autor (Sidebar en desktop) */
+        aside {
+            background-color: #b6f3f1;
+
+            h3 {
+                text-align: center;
+                color: $clr-primario;
+                margin: 0.5em;
+                font-size: 1.8em;
+            }
+
+            .foto-autor {
+                width: 80%;
+                align-items: center;
+                justify-self: center;
+
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            .autor-texto {
+                margin: 2em 0;
+            }
+        }
+    }
+
+    footer {
+        background-color: $clr-texto;
+        color: $clr-fondo;
+        text-align: center;
+        padding: 2em;
+    }
+}
+
+/* MEDIA QUERIES */
+
+/* Bootstrap md size */
+@media (min-width: 576px) and (max-width: 991px) {
+    .sobre-el-autor {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        h3 {
+            margin: 0.2em;
+        }
+
+        .autor-foto-texto {
+            display: flex;
+            gap: 1em;
+
+            .foto-autor {
+                width: 30%;
+                align-content: center;
+            }
+
+            .autor-texto {
+                width: 65%;
+                margin: 0;
+                align-content: center;
+
+                p {
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+/* bootstrap lg size */
+@media (min-width: 992px) {
+    header {
+        .navbar{
+            
+        }
+    }
+}
