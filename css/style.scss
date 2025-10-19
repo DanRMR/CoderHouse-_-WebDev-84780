@@ -1,9 +1,13 @@
+// Colores
 $clr-primario: #0A998D;
 $clr-acento: #b6f3f1;
 $clr-contraste: #F16A70;
 $clr-fondo: #fff;
 $clr-texto: #1F2A37;
 $clr-gris-claro: #cbcbcb;
+
+// altura del header
+$header-height: 64px;
 
 * {
     padding: 0;
@@ -15,15 +19,18 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
 
+    // HEADER
     header {
         position: sticky;
         top: 0;
         z-index: 999;
         box-shadow: 0 3px 10px rgba($color: $clr-primario, $alpha: 0.4);
 
+        // NAVBAR RESPONSIVE
         .navbar {
             background-color: $clr-acento;
 
+            // Logo
             a {
                 margin: 0;
                 padding: 0;
@@ -123,178 +130,218 @@ body {
                                     a.dropdown-item:active {
                                         background-color: $clr-acento;
                                     }
-
                                 }
                             }
                         }
                     }
-
-
                 }
             }
         }
     }
-}
 
-main {
-    // Sección Principal
+    main {
 
-    section {
-        
-        h1 {
-            text-align: center;
-            color: $clr-primario;
-            font-weight: bolder;
-            margin: .8em;
-        }
-    
-        .banner {
-            margin-bottom: 1.5em;
-    
-            .banner-img {
-                object-fit: cover;
-                width: 100%;
-                height: 250px;
-            }
-        }
+        // SECCION PRINIPAL
+        section {
 
-        article {
-            margin-bottom: 1em;
-            width: 100%;
+            .content-wrap {
 
-            .card-categories {
-                width: 100%;
-                background-color: $clr-contraste;
-                padding: .5em;
-    
-                h4 {
-                    margin: 0;
+
+                // titulo
+                h1 {
                     text-align: center;
-                    color: $clr-fondo;
+                    color: $clr-primario;
+                    font-weight: bolder;
+                    margin: .8em;
                 }
-            }
-            div.cards {;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-                padding: .5em;
-                background-color: rgba($color: $clr-gris-claro, $alpha: 0.3);
-                
-                div.card {
-                    display: flex;
-                    flex-direction: column;
-                    height: 240px;
-                    width: 95%;
-                    border-radius: 10px;
-                    background-color: $clr-acento;
-                    box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: 0.2);
-                    margin: .5em 0;
-                    
-                    .thumbnail {
-                        flex: 1 1 auto;
-                        overflow: hidden;
 
-                        img {
-                            display: block;
-                            width: 100%;
-                            object-fit: cover;
-                            object-position: center;
-                            align-self: center;
-                            margin: 1em 0 0 0;
-                            height: auto;
+                // banner
+                .banner {
+                    margin-bottom: 1.5em;
+
+                    .banner-img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 250px;
+                    }
+                }
+
+                .bloque-texto {
+                    /* background-color: red; */
+                }
+
+                // card categories
+                article {
+                    margin-bottom: 3em;
+                    width: 100%;
+
+                    .card-categories {
+                        width: 100%;
+                        background-color: $clr-contraste;
+                        padding: .5em;
+                        
+                        h4 {
+                            margin: 0;
+                            text-align: center;
+                            color: $clr-fondo;
                         }
                     }
+                    
+                    // cards
+                    div.cards {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 1em;
+                        background-color: rgba($color: $clr-gris-claro, $alpha: 0.3);
+                        border-bottom: 5px solid $clr-contraste;
 
-                    h5 {
-                        font-size: 1.2em;
-                        text-align: center;
-                        color: $clr-texto;
-                        margin: 5px;
-                        margin-bottom: .5em;
+                        // card individual 
+                        div.card {
+                            display: flex;
+                            flex-direction: column;
+                            height: 240px;
+                            width: 95%;
+                            border-radius: 10px;
+                            background-color: $clr-acento;
+                            box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: 0.2);
+                            margin: .5em 0;
+
+                            // imagen thumbnail
+                            .thumbnail {
+                                flex: 1 1 auto;
+                                overflow: hidden;
+
+                                img {
+                                    display: block;
+                                    width: 100%;
+                                    object-fit: cover;
+                                    object-position: center;
+                                    align-self: center;
+                                    margin: 1em 0 0 0;
+                                    height: auto;
+                                }
+                            }
+
+                            // titulo del thumbnail
+                            h5 {
+                                font-size: 1.2em;
+                                text-align: center;
+                                color: $clr-texto;
+                                margin: 5px;
+                                margin-bottom: .5em;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
 
-    // Sobre el autor (Sidebar en desktop)
-    aside.sobre-el-autor {
-        background-color: #b6f3f1;
+        // (SIDEBAR en desktop) Sobre el autor  
+        aside.sobre-el-autor {
+            background-color: #b6f3f1;
+            margin-top: 2em;
 
-        h3 {
-            text-align: center;
-            color: $clr-primario;
-            margin: 0.5em;
-            font-size: 1.8em;
-        }
-
-        .foto-autor {
-            width: 80%;
-            align-items: center;
-            justify-self: center;
-
-            img {
-                width: 100%;
-                border-radius: 50%;
+            h3 {
+                text-align: center;
+                color: $clr-primario;
+                margin: 0.5em;
+                font-size: 1.8em;
             }
-        }
-
-        .autor-texto {
-            margin: 2em 0;
-        }
-    }
-}
-
-footer {
-    background-color: $clr-texto;
-    color: $clr-fondo;
-    text-align: center;
-    padding: 1.5em;
-
-    p {
-        margin: 0;
-    }
-}
-
-
-// MEDIA QUERIES
-
-// Bootstrap md size
-@media (min-width: 576px) and (max-width: 991px) {
-
-    aside.sobre-el-autor {
-        display: flex;
-        flex-direction: column;
-        padding: 1em 2em 2em;
-
-        h3 {
-            margin: 0.2em;
-        }
-
-        .autor-foto-texto {
-            display: flex;
-            justify-content: space-between;
 
             .foto-autor {
-                width: 30%;
-                align-content: center;
+                width: 70%;
+                align-items: center;
+                justify-self: center;
+
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
             }
 
             .autor-texto {
-                width: 65%;
-                margin: 0;
+                margin: 2em 1em;
 
                 p {
-                    margin: 5px 0 5px ;
                     text-align: justify;
                 }
             }
         }
     }
+
+    // FOOTER
+    footer {
+        background-color: $clr-texto;
+        color: $clr-fondo;
+        text-align: center;
+        padding: 1.5em;
+
+        p {
+            margin: 0;
+        }
+    }
+
 }
 
-// bootstrap lg size
+
+
+//----- MEDIA QUERIES --------
+
+// MD SIZE en Bootstrap
+@media (min-width: 576px) and (max-width: 991px) {
+    body {
+
+        main {
+
+            section {
+
+                .bloque-texto {
+                    margin: 2em 1em;
+                }
+
+                article {}
+
+            }
+
+            aside.sobre-el-autor {
+                display: flex;
+                flex-direction: column;
+                padding: 1em 2em 2em;
+
+                h3 {
+                    margin: 0.2em;
+                }
+
+                .autor-foto-texto {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .foto-autor {
+                        width: 30%;
+                        align-content: center;
+                    }
+    
+                    .autor-texto {
+                        width: 65%;
+                        margin: 0;
+    
+                        p {
+                            margin: 5px 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+// LG SIZE en bootstrap 
 @media (min-width: 992px) {
 
     body {
@@ -363,7 +410,76 @@ footer {
 
         main {
 
-            h1 {}
+            section {
+                margin-bottom: 5em;
+
+                .content-wrap {
+                    box-sizing: border-box;
+                    max-width: 850px;
+                    margin-inline: auto;
+
+                    .bloque-texto {
+                        margin: 2em 2.5em;
+                    }
+
+                    article {
+
+                        // cards
+                        div.cards {
+                            flex-direction: row;
+                            padding-inline: 1em;
+                        }
+
+
+                        // cards skills (con grid)
+                        div.cards-skills-grid {
+                            display: grid;
+                            grid-template: 1fr 1fr / 1fr 1fr;
+                            grid-area: "reading" "listening"
+                                "writing" "speaking";
+                            padding-inline: auto;
+
+                            div.card {
+                                margin-inline: auto;
+
+
+                                .thumbnail {
+
+                                    img {}
+                                }
+
+                                h5 {}
+                            }
+                        }
+                    }
+                }
+            }
+
+            // SIDEBAR - Sobre el Autor
+            aside.sobre-el-autor {
+                margin-top: 0;
+                display: block;
+                height: auto;
+
+                h3 {
+                }
+
+                .autor-foto-texto {
+                    display: contents;
+
+                    .foto-autor {
+                        width: 70%;
+                        max-width: 250px;
+                    }
+
+                    .autor-texto {
+                        text-align: justify;
+                        padding: 0 1.2em;
+
+                    }
+                }
+
+            }
         }
     }
 }
