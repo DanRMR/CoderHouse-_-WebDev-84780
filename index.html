@@ -17,25 +17,21 @@
 
 <body>
     <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
+        <!-- NAVBAR (Offcanvas - getbootstrap.com) -->
+        <nav class="navbar navbar-expand-lg sticky-top py-lg-0">
+            <div class="container-xl">
 
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./img/Logo-no-background.png" alt="logo" class="logo">
-                </a>
+                <a class="navbar-brand" href="./index.html"> <img src="./img/Logo-no-background.png" alt="logo" class="logo"> </a>
 
                 <!-- hamburger button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Navbar desplegable -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
+                <!-- Navbar Responsive -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-                    <!-- boton X -->
+                    <!-- X button -->
                     <div class="offcanvas-header">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -43,37 +39,36 @@
                     <!-- links  -->
                     <div class="offcanvas-body">
 
-                        <ul class="navbar-nav justify-content-end flex-grow-1 ">
-
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            
                             <!-- Dropdown de Systems -->
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="./systems.html" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="./systems.html" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     Language Systems
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./systems.html#pronunciation">Pronunciation</a>
-                                    </li>
+                                    <li><a class="dropdown-item" href="./systems.html#pronunciation">Pronunciation</a></li>
                                     <li><a class="dropdown-item" href="./systems.html#vocabulary">Vocabulary</a></li>
                                     <li><a class="dropdown-item" href="./systems.html#grammar">Grammar</a></li>
                                 </ul>
                             </li>
                             <!-- Dropdwon de Skills  -->
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="./skills.html" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="./skills.html" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     English Skills
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <h6 class="skills-receptive">Receptive Skills</h6>
-                                    <li><a class="dropdown-item" href="./skills.html#listening">Listening</a></li>
-                                    <li><a class="dropdown-item" href="./skills.html#reading">Reading</a></li>
+                                    <h6 class="skills">Receptive Skills</h6>
+                                    <li><a class="dropdown-item" href="#">Listening</a></li>
+                                    <li><a class="dropdown-item" href="#">Reading</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <h6 class="skills-receptive">Productive Skills</h6>
-                                    <li><a class="dropdown-item" href="./skills.html#speaking">Speaking</a></li>
-                                    <li><a class="dropdown-item" href="./skills.html#writing">Writing</a></li>
+                                    <h6 class="skills">Productive Skills</h6>
+                                    <li><a class="dropdown-item" href="#">Speaking</a></li>
+                                    <li><a class="dropdown-item" href="#">Writing</a></li>
                                 </ul>
                             </li>
 
@@ -82,28 +77,22 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="./autoevaluacion.html">Auto-evaluación</a>
+                                <a class="nav-link active" aria-current="page" href="./autoevaluacion.html">Auto-evaluación</a>
                             </li>
 
                         </ul>
 
-                        <!-- search bar -->
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container-fluid">
+    <main class="container-xxl">
         <div class="outline row">
-            <section class=" col-sm-12 col-lg-8 col-xl-9">
+            <section class=" col-sm-12 col-lg-9">
 
-                <div>
+                <div class="container-md">
                     <h1>Learn English Hub</h1>
 
                     <div class="banner">
@@ -213,7 +202,7 @@
             </section>
 
             <!-- Sobre el Autor (Sidebar) -->
-            <aside class="sobre-el-autor col-sm-12 col-lg-4 col-xl-3">
+            <aside class="sobre-el-autor col-sm-12 col-lg-3">
                 <h3>Sobre el autor</h3>
                 <div class="autor-foto-texto">
                     <div class="foto-autor">

@@ -19,29 +19,38 @@ body {
         position: sticky;
         top: 0;
         z-index: 999;
+        border-bottom: 4px solid $clr-primario;
+
         .navbar {
             background-color: $clr-acento;
-    
-    
-            .logo {
-                height: 45px;
-                display: block;
-                background-color: #b6f3f1;
+
+            a {
+                margin: 0;
+                padding: 0;
+
+
+                .logo {
+                    height: 40px;
+                    display: block;
+                    background-color: #b6f3f1;
+                    margin: 0;
+                    padding: 0;
+                }
             }
-    
-            /* hamburger button */
+
+            // hamburger button
             button.navbar-toggler {
                 border: none;
                 font-size: 1.3em;
             }
-    
-            /* navbar desplegable */
+
+            // navbar desplegable
             .offcanvas {
                 background-color: $clr-primario;
-    
-                /* boton de X */
+
+                // boton de X
                 .offcanvas-header {
-    
+
                     .btn-close {
                         font-size: 1.3em;
                         color: $clr-fondo;
@@ -49,154 +58,154 @@ body {
                         margin-right: 5px;
                     }
                 }
-    
-                /* Links */
+
+                // Links
                 .offcanvas-body {
                     padding: 0;
-    
+
                     ul.navbar-nav {
                         margin-bottom: 2em;
-                        
+
                         li.nav-item {
-                            
+
                             a {
                                 font-size: 1.3em;
                                 padding: .6em 2em;
                                 color: $clr-fondo;
                                 font-weight: 500;
                             }
-                            
+
 
                             a:hover {
                                 background-color: rgba($color: $clr-acento, $alpha: 0.5);
                                 color: $clr-texto;
                                 transition: 0.1s ease;
                             }
+
                             a:active {
                                 color: $clr-primario;
                                 background-color: $clr-acento;
                                 color: $clr-texto;
                             }
-    
-                            /* Links con Dropdown */
+
+                            // Links con Dropdown
                             .dropdown-menu {
                                 margin: .5em 2em;
                                 padding: 2px;
                                 background-color: $clr-primario;
                                 border: 1px solid $clr-acento;
-    
+
                                 h6 {
                                     font-size: 1.2em;
                                     color: $clr-acento;
                                     text-align: center;
                                     margin: 5px;
                                 }
-    
+
                                 li {
                                     margin: 0;
                                     background-color: $clr-primario;
-    
+
                                     .dropdown-divider {
                                         background-color: $clr-acento;
-                                        /* border: 0.5px solid $clr-acento; */
                                     }
-    
+
                                     a.dropdown-item {
                                         color: $clr-fondo;
                                     }
-    
+
                                     a.dropdown-item:hover {
                                         background-color: rgba($color: $clr-acento, $alpha: 0.5);
-                                color: $clr-texto;
+                                        color: $clr-texto;
                                         color: $clr-texto;
                                     }
 
                                     a.dropdown-item:active {
                                         background-color: $clr-acento;
                                     }
-    
+
                                 }
                             }
                         }
                     }
-    
-                    form.d-flex {
-                        margin: 0 2em;
-                        /* height: 2.5em; */
-    
-                        .btn-outline-success {
-                            background-color: $clr-contraste;
-                            color: $clr-fondo;
-                        }
-                    }
+
+
                 }
             }
         }
-    }
-    /* Navbar */
-
-
-    main {
-        /* Sección Principal */
-
-        h1 {
-            text-align: center;
-            color: $clr-primario;
-            font-weight: bolder;
-            margin: .8em;
-        }
-
-        .banner {
-            margin-bottom: 1.5em;
-
-            .banner-img {
-                object-fit: cover;
-                width: 100%;
-                height: 250px;
-            }
-        }
-
-
-        /* Sobre el autor (Sidebar en desktop) */
-        aside {
-            background-color: #b6f3f1;
-
-            h3 {
-                text-align: center;
-                color: $clr-primario;
-                margin: 0.5em;
-                font-size: 1.8em;
-            }
-
-            .foto-autor {
-                width: 80%;
-                align-items: center;
-                justify-self: center;
-
-                img {
-                    width: 100%;
-                    border-radius: 50%;
-                }
-            }
-
-            .autor-texto {
-                margin: 2em 0;
-            }
-        }
-    }
-
-    footer {
-        background-color: $clr-texto;
-        color: $clr-fondo;
-        text-align: center;
-        padding: 2em;
     }
 }
 
-/* MEDIA QUERIES */
+main {
+    // Sección Principal
 
-/* Bootstrap md size */
+    h1 {
+        text-align: center;
+        color: $clr-primario;
+        font-weight: bolder;
+        margin: .8em;
+    }
+
+    .banner {
+        margin-bottom: 1.5em;
+
+        .banner-img {
+            object-fit: cover;
+            width: 100%;
+            height: 250px;
+        }
+    }
+
+
+    // Sobre el autor (Sidebar en desktop)
+    aside {
+        background-color: #b6f3f1;
+
+        h3 {
+            text-align: center;
+            color: $clr-primario;
+            margin: 0.5em;
+            font-size: 1.8em;
+        }
+
+        .foto-autor {
+            width: 80%;
+            align-items: center;
+            justify-self: center;
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .autor-texto {
+            margin: 2em 0;
+        }
+    }
+}
+
+footer {
+    background-color: $clr-texto;
+    color: $clr-fondo;
+    text-align: center;
+    padding: 1.5em;
+
+    p {
+        margin: 0;
+    }
+}
+
+
+// MEDIA QUERIES
+
+// Bootstrap md size
 @media (min-width: 576px) and (max-width: 991px) {
+
+    .navbar {
+        color: red;
+    }
+
     .sobre-el-autor {
         display: flex;
         flex-direction: column;
@@ -228,11 +237,77 @@ body {
     }
 }
 
-/* bootstrap lg size */
+// bootstrap lg size
 @media (min-width: 992px) {
-    header {
-        .navbar{
-            
+
+    body {
+
+        header {
+            .navbar {
+                color: red;
+
+                .offcanvas {
+
+                    .offcanvas-body {
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+
+                        ul.navbar-nav {
+                            margin-bottom: 0;
+
+                            li.nav-item {
+
+                                a {
+                                    padding: 0.8em 1em;
+                                    color: $clr-primario;
+                                }
+
+                                a:hover {
+                                    background-color: rgba($color: $clr-primario, $alpha: 0.5);
+                                    color: $clr-texto;
+                                    transition: 0.1s ease;
+                                }
+
+                                a:active {
+                                    background-color: $clr-primario;
+                                    color: $clr-fondo;
+                                }
+
+                                ul.dropdown-menu {
+                                    margin: .5em 0;
+                                    padding: 2px;
+                                    background-color: $clr-primario;
+                                    border: 1px solid $clr-acento;
+                                    width: 100%;
+
+                                    li {
+
+                                        a.dropdown-item {
+                                            color: $clr-fondo;
+                                        }
+
+                                        a.dropdown-item:hover {
+                                            background-color: rgba($color: $clr-acento, $alpha: 0.5);
+                                            color: $clr-texto;
+                                            color: $clr-texto;
+                                        }
+
+                                        a.dropdown-item:active {
+                                            background-color: $clr-acento;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+
+            h1 {}
         }
     }
 }
