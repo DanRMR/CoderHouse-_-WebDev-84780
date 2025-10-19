@@ -11,7 +11,7 @@ body header {
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: 4px solid #0A998D;
+  box-shadow: 0 3px 10px rgba(10, 153, 141, 0.4);
 }
 body header .navbar {
   background-color: #b6f3f1;
@@ -93,39 +93,91 @@ body header .navbar .offcanvas .offcanvas-body ul.navbar-nav li.nav-item .dropdo
   background-color: #b6f3f1;
 }
 
-main h1 {
+main section h1 {
   text-align: center;
   color: #0A998D;
   font-weight: bolder;
   margin: 0.8em;
 }
-main .banner {
+main section .banner {
   margin-bottom: 1.5em;
 }
-main .banner .banner-img {
+main section .banner .banner-img {
   object-fit: cover;
   width: 100%;
   height: 250px;
 }
-main aside {
+main section article {
+  margin-bottom: 1em;
+  width: 100%;
+}
+main section article .card-categories {
+  width: 100%;
+  background-color: #F16A70;
+  padding: 0.5em;
+}
+main section article .card-categories h4 {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+main section article div.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5em;
+  background-color: rgba(203, 203, 203, 0.3);
+}
+main section article div.cards div.card {
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+  width: 95%;
+  border-radius: 10px;
+  background-color: #b6f3f1;
+  box-shadow: 3px 5px 10px rgba(31, 42, 55, 0.2);
+  margin: 0.5em 0;
+}
+main section article div.cards div.card .thumbnail {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+main section article div.cards div.card .thumbnail img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  align-self: center;
+  margin: 1em 0 0 0;
+  height: auto;
+}
+main section article div.cards div.card h5 {
+  font-size: 1.2em;
+  text-align: center;
+  color: #1F2A37;
+  margin: 5px;
+  margin-bottom: 0.5em;
+}
+main aside.sobre-el-autor {
   background-color: #b6f3f1;
 }
-main aside h3 {
+main aside.sobre-el-autor h3 {
   text-align: center;
   color: #0A998D;
   margin: 0.5em;
   font-size: 1.8em;
 }
-main aside .foto-autor {
+main aside.sobre-el-autor .foto-autor {
   width: 80%;
   align-items: center;
   justify-self: center;
 }
-main aside .foto-autor img {
+main aside.sobre-el-autor .foto-autor img {
   width: 100%;
   border-radius: 50%;
 }
-main aside .autor-texto {
+main aside.sobre-el-autor .autor-texto {
   margin: 2em 0;
 }
 
@@ -140,38 +192,32 @@ footer p {
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
-  .navbar {
-    color: red;
-  }
-  .sobre-el-autor {
+  aside.sobre-el-autor {
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    padding: 1em 2em 2em;
   }
-  .sobre-el-autor h3 {
+  aside.sobre-el-autor h3 {
     margin: 0.2em;
   }
-  .sobre-el-autor .autor-foto-texto {
+  aside.sobre-el-autor .autor-foto-texto {
     display: flex;
-    gap: 1em;
+    justify-content: space-between;
   }
-  .sobre-el-autor .autor-foto-texto .foto-autor {
+  aside.sobre-el-autor .autor-foto-texto .foto-autor {
     width: 30%;
     align-content: center;
   }
-  .sobre-el-autor .autor-foto-texto .autor-texto {
+  aside.sobre-el-autor .autor-foto-texto .autor-texto {
     width: 65%;
     margin: 0;
-    align-content: center;
   }
-  .sobre-el-autor .autor-foto-texto .autor-texto p {
-    margin: 5px 0;
+  aside.sobre-el-autor .autor-foto-texto .autor-texto p {
+    margin: 5px 0 5px;
+    text-align: justify;
   }
 }
 @media (min-width: 992px) {
-  body header .navbar {
-    color: red;
-  }
   body header .navbar .offcanvas .offcanvas-body {
     display: flex;
     align-items: center;

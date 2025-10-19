@@ -19,7 +19,7 @@ body {
         position: sticky;
         top: 0;
         z-index: 999;
-        border-bottom: 4px solid $clr-primario;
+        box-shadow: 0 3px 10px rgba($color: $clr-primario, $alpha: 0.4);
 
         .navbar {
             background-color: $clr-acento;
@@ -139,26 +139,87 @@ body {
 main {
     // Sección Principal
 
-    h1 {
-        text-align: center;
-        color: $clr-primario;
-        font-weight: bolder;
-        margin: .8em;
-    }
+    section {
+        
+        h1 {
+            text-align: center;
+            color: $clr-primario;
+            font-weight: bolder;
+            margin: .8em;
+        }
+    
+        .banner {
+            margin-bottom: 1.5em;
+    
+            .banner-img {
+                object-fit: cover;
+                width: 100%;
+                height: 250px;
+            }
+        }
 
-    .banner {
-        margin-bottom: 1.5em;
-
-        .banner-img {
-            object-fit: cover;
+        article {
+            margin-bottom: 1em;
             width: 100%;
-            height: 250px;
+
+            .card-categories {
+                width: 100%;
+                background-color: $clr-contraste;
+                padding: .5em;
+    
+                h4 {
+                    margin: 0;
+                    text-align: center;
+                    color: $clr-fondo;
+                }
+            }
+            div.cards {;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: .5em;
+                background-color: rgba($color: $clr-gris-claro, $alpha: 0.3);
+                
+                div.card {
+                    display: flex;
+                    flex-direction: column;
+                    height: 240px;
+                    width: 95%;
+                    border-radius: 10px;
+                    background-color: $clr-acento;
+                    box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: 0.2);
+                    margin: .5em 0;
+                    
+                    .thumbnail {
+                        flex: 1 1 auto;
+                        overflow: hidden;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            align-self: center;
+                            margin: 1em 0 0 0;
+                            height: auto;
+                        }
+                    }
+
+                    h5 {
+                        font-size: 1.2em;
+                        text-align: center;
+                        color: $clr-texto;
+                        margin: 5px;
+                        margin-bottom: .5em;
+                    }
+                }
+            }
         }
     }
 
-
     // Sobre el autor (Sidebar en desktop)
-    aside {
+    aside.sobre-el-autor {
         background-color: #b6f3f1;
 
         h3 {
@@ -202,14 +263,10 @@ footer {
 // Bootstrap md size
 @media (min-width: 576px) and (max-width: 991px) {
 
-    .navbar {
-        color: red;
-    }
-
-    .sobre-el-autor {
+    aside.sobre-el-autor {
         display: flex;
         flex-direction: column;
-        padding: 1em;
+        padding: 1em 2em 2em;
 
         h3 {
             margin: 0.2em;
@@ -217,7 +274,7 @@ footer {
 
         .autor-foto-texto {
             display: flex;
-            gap: 1em;
+            justify-content: space-between;
 
             .foto-autor {
                 width: 30%;
@@ -227,10 +284,10 @@ footer {
             .autor-texto {
                 width: 65%;
                 margin: 0;
-                align-content: center;
 
                 p {
-                    margin: 5px 0;
+                    margin: 5px 0 5px ;
+                    text-align: justify;
                 }
             }
         }
@@ -244,7 +301,6 @@ footer {
 
         header {
             .navbar {
-                color: red;
 
                 .offcanvas {
 
