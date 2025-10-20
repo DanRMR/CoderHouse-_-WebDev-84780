@@ -143,7 +143,7 @@ main article div.cards div.card {
   margin: 0.5em 0;
 }
 main article div.cards div.card .thumbnail {
-  flex: 1 1 auto;
+  height: clamp(140px, 18vw, 200px);
   overflow: hidden;
 }
 main article div.cards div.card .thumbnail img {
@@ -191,16 +191,16 @@ main.card-categories {
   cursor: pointer;
 }
 
-article .cards-systems-flex a {
+article .cards a {
   text-decoration: none;
   text-align: center;
   display: flex;
   justify-content: center;
 }
-article .cards-systems-flex a .card {
+article .cards a .card {
   margin: 0;
 }
-article .cards-systems-flex a .card h5 {
+article .cards a .card h5 {
   background-color: #b6f3f1;
   border: none;
 }
@@ -225,7 +225,8 @@ details.systems-skills-dropdown summary.dropdown-header {
   font-weight: 500;
 }
 details.systems-skills-dropdown .system-skill-body {
-  padding: 1em 1em 2em;
+  padding: 2em;
+  border-bottom: 4px solid #F16A70;
 }
 details.systems-skills-dropdown .system-skill-body .system-skill-drop {
   background-color: #fff;
@@ -328,9 +329,15 @@ footer p {
   header .navbar .offcanvas .offcanvas-body ul.navbar-nav li.nav-item ul.dropdown-menu li a.dropdown-item:active {
     background-color: #b6f3f1;
   }
-  main article div.cards {
+  main article div.cards-systems-flex {
     flex-direction: row;
     padding-inline: 1em;
+  }
+  main article div.cards-systems-flex a {
+    height: 100%;
+  }
+  main article div.cards-systems-flex a .card {
+    height: clamp(140px, 18vw, 200px);
   }
   main article div.cards-skills-grid {
     display: grid;
@@ -340,9 +347,6 @@ footer p {
   }
   main article div.cards-skills-grid div.card {
     margin-inline: auto;
-  }
-  main section {
-    margin-bottom: 5em;
   }
   main section .content-wrap {
     box-sizing: border-box;
