@@ -337,10 +337,10 @@ details.systems-skills-dropdown {
             summary.disabled-dropdown {
                 color: $clr-gris-claro;
             }
-            
+
             .system-skill-drop-body {
                 padding: 1em;
-                
+
                 a {
                     color: $clr-gris-claro;
                 }
@@ -348,10 +348,46 @@ details.systems-skills-dropdown {
         }
     }
 
-
-
 }
 
+.score-chart {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    .table {
+        width: 100%;
+        box-shadow: 3px 5px 20px $clr-gris-claro;
+        margin: 2em auto;
+
+        th {
+            background-color: $clr-acento;
+        }
+    }
+}
+
+
+.nivel-real {
+    background-color: $clr-acento;
+    margin: 3em 0;
+
+    h2 {
+        background-color: $clr-primario;
+        color: $clr-fondo;
+        text-align: left;
+        padding: 5px 1em;
+    }
+
+    div {
+        padding: 1.5em;
+
+        h3 {
+            color: $clr-primario;
+        }
+    }
+
+}
 
 //-----------------
 // FOOTER
@@ -500,18 +536,18 @@ footer {
             div.cards-systems-flex {
                 flex-direction: row;
                 padding-inline: 1em;
-                
+
                 a {
                     height: 100%;
-                    
+
                     .card {
                         height: clamp(140px, 18vw, 200px);
-                        
+
                         .thumbnail {
-                            
+
                             img {
                                 height: 100%;
-                                
+
                             }
                         }
 
@@ -531,7 +567,6 @@ footer {
 
                 div.card {
                     margin-inline: auto
-
                 }
             }
         }

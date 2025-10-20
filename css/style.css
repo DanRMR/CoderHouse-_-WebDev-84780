@@ -253,6 +253,38 @@ details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-sk
   color: #cbcbcb;
 }
 
+.score-chart {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.score-chart .table {
+  width: 100%;
+  box-shadow: 3px 5px 20px #cbcbcb;
+  margin: 2em auto;
+}
+.score-chart .table th {
+  background-color: #b6f3f1;
+}
+
+.nivel-real {
+  background-color: #b6f3f1;
+  margin: 3em 0;
+}
+.nivel-real h2 {
+  background-color: #0A998D;
+  color: #fff;
+  text-align: left;
+  padding: 5px 1em;
+}
+.nivel-real div {
+  padding: 1.5em;
+}
+.nivel-real div h3 {
+  color: #0A998D;
+}
+
 footer {
   background-color: #1F2A37;
   color: #fff;
