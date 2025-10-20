@@ -18,119 +18,121 @@ $header-height: 64px;
 body {
     min-height: 100vh;
     min-height: 100dvh;
+}
 
-    // HEADER
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        box-shadow: 0 3px 10px rgba($color: $clr-primario, $alpha: 0.4);
-
-        // NAVBAR RESPONSIVE
-        .navbar {
-            background-color: $clr-acento;
-
-            // Logo
-            a {
-                margin: 0;
-                padding: 0;
+// HEADER
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 3px 10px rgba($color: $clr-primario, $alpha: 0.4);
+    border-bottom: 4px solid $clr-primario;
+}
 
 
-                .logo {
-                    height: 40px;
-                    display: block;
-                    background-color: #b6f3f1;
-                    margin: 0;
-                    padding: 0;
-                }
-            }
+// NAVBAR RESPONSIVE
+.navbar {
+    background-color: $clr-acento;
 
-            // hamburger button
-            button.navbar-toggler {
-                border: none;
+    // Logo
+    a {
+        margin: 0;
+        padding: 0;
+
+
+        .logo {
+            height: 40px;
+            display: block;
+            background-color: #b6f3f1;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    // hamburger button
+    button.navbar-toggler {
+        border: none;
+        font-size: 1.3em;
+    }
+
+    // navbar desplegable
+    .offcanvas {
+        background-color: $clr-acento;
+
+        // boton de X
+        .offcanvas-header {
+
+            .btn-close {
                 font-size: 1.3em;
+                color: $clr-fondo;
+                margin-top: 5px;
+                margin-right: 5px;
             }
+        }
 
-            // navbar desplegable
-            .offcanvas {
-                background-color: $clr-primario;
+        // Links
+        .offcanvas-body {
+            padding: 0;
 
-                // boton de X
-                .offcanvas-header {
+            ul.navbar-nav {
+                margin-bottom: 2em;
 
-                    .btn-close {
+                li.nav-item {
+
+                    a {
                         font-size: 1.3em;
-                        color: $clr-fondo;
-                        margin-top: 5px;
-                        margin-right: 5px;
+                        padding: .6em 2em;
+                        color: $clr-primario;
+                        font-weight: 500;
                     }
-                }
 
-                // Links
-                .offcanvas-body {
-                    padding: 0;
 
-                    ul.navbar-nav {
-                        margin-bottom: 2em;
+                    a:hover {
+                        background-color: rgba($color: $clr-primario, $alpha: 0.5);
+                        color: $clr-texto;
+                        transition: 0.1s ease;
+                    }
 
-                        li.nav-item {
+                    a:active {
+                        background-color: $clr-primario;
+                        color: $clr-fondo;
+                    }
 
-                            a {
-                                font-size: 1.3em;
-                                padding: .6em 2em;
-                                color: $clr-fondo;
-                                font-weight: 500;
+                    // Links con Dropdown
+                    .dropdown-menu {
+                        margin: .5em 2em;
+                        padding: 2px;
+                        background-color: $clr-primario;
+                        border: 1px solid $clr-acento;
+
+
+                        h6 {
+                            font-size: 1.2em;
+                            color: $clr-acento;
+                            text-align: center;
+                            margin: 5px;
+                        }
+
+                        li {
+                            margin: 0;
+                            background-color: $clr-primario;
+
+
+                            .dropdown-divider {
+                                background-color: $clr-acento;
                             }
 
+                            a.dropdown-item {
+                                color: $clr-fondo;
+                            }
 
-                            a:hover {
+                            a.dropdown-item:hover {
                                 background-color: rgba($color: $clr-acento, $alpha: 0.5);
                                 color: $clr-texto;
-                                transition: 0.1s ease;
                             }
 
-                            a:active {
-                                color: $clr-primario;
+                            a.dropdown-item:active {
                                 background-color: $clr-acento;
-                                color: $clr-texto;
-                            }
-
-                            // Links con Dropdown
-                            .dropdown-menu {
-                                margin: .5em 2em;
-                                padding: 2px;
-                                background-color: $clr-primario;
-                                border: 1px solid $clr-acento;
-
-                                h6 {
-                                    font-size: 1.2em;
-                                    color: $clr-acento;
-                                    text-align: center;
-                                    margin: 5px;
-                                }
-
-                                li {
-                                    margin: 0;
-                                    background-color: $clr-primario;
-
-                                    .dropdown-divider {
-                                        background-color: $clr-acento;
-                                    }
-
-                                    a.dropdown-item {
-                                        color: $clr-fondo;
-                                    }
-
-                                    a.dropdown-item:hover {
-                                        background-color: rgba($color: $clr-acento, $alpha: 0.5);
-                                        color: $clr-texto;
-                                        color: $clr-texto;
-                                    }
-
-                                    a.dropdown-item:active {
-                                        background-color: $clr-acento;
-                                    }
-                                }
                             }
                         }
                     }
@@ -138,152 +140,228 @@ body {
             }
         }
     }
-
-    main {
-
-        // SECCION PRINIPAL
-        section {
-
-            .content-wrap {
+}
 
 
-                // titulo
-                h1 {
-                    text-align: center;
-                    color: $clr-primario;
-                    font-weight: bolder;
-                    margin: .8em;
-                }
+// SECCION PRINIPAL
+main {
 
-                // banner
-                .banner {
-                    margin-bottom: 1.5em;
-
-                    .banner-img {
-                        object-fit: cover;
-                        width: 100%;
-                        height: 250px;
-                    }
-                }
-
-                .bloque-texto {
-                    /* background-color: red; */
-                }
-
-                // card categories
-                article {
-                    margin-bottom: 3em;
-                    width: 100%;
-
-                    .card-categories {
-                        width: 100%;
-                        background-color: $clr-contraste;
-                        padding: .5em;
-                        
-                        h4 {
-                            margin: 0;
-                            text-align: center;
-                            color: $clr-fondo;
-                        }
-                    }
-                    
-                    // cards
-                    div.cards {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 10px;
-                        padding: 1em;
-                        background-color: rgba($color: $clr-gris-claro, $alpha: 0.3);
-                        border-bottom: 5px solid $clr-contraste;
-
-                        // card individual 
-                        div.card {
-                            display: flex;
-                            flex-direction: column;
-                            height: 240px;
-                            width: 95%;
-                            border-radius: 10px;
-                            background-color: $clr-acento;
-                            box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: 0.2);
-                            margin: .5em 0;
-
-                            // imagen thumbnail
-                            .thumbnail {
-                                flex: 1 1 auto;
-                                overflow: hidden;
-
-                                img {
-                                    display: block;
-                                    width: 100%;
-                                    object-fit: cover;
-                                    object-position: center;
-                                    align-self: center;
-                                    margin: 1em 0 0 0;
-                                    height: auto;
-                                }
-                            }
-
-                            // titulo del thumbnail
-                            h5 {
-                                font-size: 1.2em;
-                                text-align: center;
-                                color: $clr-texto;
-                                margin: 5px;
-                                margin-bottom: .5em;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        // (SIDEBAR en desktop) Sobre el autor  
-        aside.sobre-el-autor {
-            background-color: #b6f3f1;
-            margin-top: 2em;
-
-            h3 {
-                text-align: center;
-                color: $clr-primario;
-                margin: 0.5em;
-                font-size: 1.8em;
-            }
-
-            .foto-autor {
-                width: 70%;
-                align-items: center;
-                justify-self: center;
-
-                img {
-                    width: 100%;
-                    border-radius: 50%;
-                }
-            }
-
-            .autor-texto {
-                margin: 2em 1em;
-
-                p {
-                    text-align: justify;
-                }
-            }
-        }
-    }
-
-    // FOOTER
-    footer {
-        background-color: $clr-texto;
-        color: $clr-fondo;
+    // titulo
+    h1.header {
         text-align: center;
-        padding: 1.5em;
+        color: $clr-primario;
+        font-weight: bolder;
+        margin: .8em;
+    }
 
-        p {
-            margin: 0;
+    // banner
+    .banner {
+        margin-bottom: 1.5em;
+
+        .banner-img {
+            object-fit: cover;
+            width: 100%;
+            height: 250px;
         }
     }
+}
+
+main {
+
+    // card categories
+    article {
+        margin-bottom: 3em;
+        width: 100%;
+
+        .card-categories {
+            width: 100%;
+            background-color: $clr-contraste;
+            padding: .5em;
+
+            h4 {
+                margin: 0;
+                text-align: center;
+                color: $clr-fondo;
+            }
+        }
+
+        // cards
+        div.cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 1em;
+            background-color: rgba($color: $clr-gris-claro, $alpha: 0.3);
+            border-bottom: 5px solid $clr-contraste;
+
+            // card individual 
+            div.card {
+                display: flex;
+                flex-direction: column;
+                height: 240px;
+                width: 95%;
+                border-radius: 10px;
+                background-color: $clr-acento;
+                box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: 0.2);
+                margin: .5em 0;
+
+                // imagen thumbnail
+                .thumbnail {
+                    flex: 1 1 auto;
+                    overflow: hidden;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        align-self: center;
+                        margin: 1em 0 0 0;
+                        height: auto;
+                    }
+                }
+
+                // titulo del thumbnail
+                h5.card-header {
+                    font-size: 1.2em;
+                    color: $clr-texto;
+                    margin: 5px;
+                    margin-bottom: .5em;
+                }
+            }
+        }
+    }
+
+
+
+
+    // (SIDEBAR en desktop) Sobre el autor  
+    aside.sobre-el-autor {
+        background-color: #b6f3f1;
+        margin-top: 2em;
+
+        h3 {
+            text-align: center;
+            color: $clr-primario;
+            margin: 0.5em;
+            font-size: 1.8em;
+        }
+
+        .foto-autor {
+            width: 70%;
+            align-items: center;
+            justify-self: center;
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .autor-texto {
+            margin: 2em 1em;
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+
+main.card-categories {
+    cursor: pointer;
+}
+
+article .cards-systems-flex a {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .card {
+        margin: 0;
+
+        h5 {
+            background-color: $clr-acento;
+            border: none;
+        }
+    }
+}
+
+// ----------- systems.html --------------
+.content-wrap {
+    margin-bottom: 2em;
+}
+
+details.systems-skills-dropdown {
+    margin: 2em 0;
+    width: 100%;
+    background-color: rgba($color: $clr-gris-claro, $alpha: 0.5);   
+    
+    // Header - Dropdown de Sistemas
+    summary.dropdown-header {
+        width: 100%;
+        display: block;
+        text-align: center;
+        color: $clr-fondo;
+        background-color: $clr-contraste;
+        font-size: 1.5em;
+        padding: 5px;
+        font-weight: 500;
+
+    }
+
+    .system-skill-body {
+        padding: 1em 1em 2em; 
+
+        .system-skill-drop {
+            background-color: $clr-fondo;
+            margin: .75em 0;
+            box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: .1) ;
+
+            
+            summary {
+                background-color: $clr-acento;
+                font-weight: 500;
+                color: $clr-texto;
+                padding: 10px;
+            }
+
+            summary.disabled-dropdown {
+                color: $clr-gris-claro;
+            }
+
+            .system-skill-drop-body {
+                padding: 1em;
+
+                a {
+                    color: $clr-gris-claro;
+                }
+            }
+        }
+    }
+
+
 
 }
+
+
+//-----------------
+// FOOTER
+footer {
+    background-color: $clr-texto;
+    color: $clr-fondo;
+    text-align: center;
+    padding: 1.5em;
+
+    p {
+        margin: 0;
+    }
+}
+
+
 
 
 
@@ -324,11 +402,11 @@ body {
                         width: 30%;
                         align-content: center;
                     }
-    
+
                     .autor-texto {
                         width: 65%;
                         margin: 0;
-    
+
                         p {
                             margin: 5px 0 5px;
                         }
@@ -344,61 +422,62 @@ body {
 // LG SIZE en bootstrap 
 @media (min-width: 992px) {
 
-    body {
 
-        header {
-            .navbar {
 
-                .offcanvas {
+    header {
 
-                    .offcanvas-body {
-                        display: flex;
-                        align-items: center;
-                        padding: 0;
+        // NAVBAR
+        .navbar {
 
-                        ul.navbar-nav {
-                            margin-bottom: 0;
+            .offcanvas {
 
-                            li.nav-item {
+                .offcanvas-body {
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
 
-                                a {
-                                    padding: 0.8em 1em;
-                                    color: $clr-primario;
-                                }
+                    ul.navbar-nav {
+                        margin-bottom: 0;
 
-                                a:hover {
-                                    background-color: rgba($color: $clr-primario, $alpha: 0.5);
-                                    color: $clr-texto;
-                                    transition: 0.1s ease;
-                                }
+                        li.nav-item {
 
-                                a:active {
-                                    background-color: $clr-primario;
-                                    color: $clr-fondo;
-                                }
+                            a {
+                                padding: 0.8em 1em;
+                                color: $clr-primario;
+                            }
 
-                                ul.dropdown-menu {
-                                    margin: .5em 0;
-                                    padding: 2px;
-                                    background-color: $clr-primario;
-                                    border: 1px solid $clr-acento;
-                                    width: 100%;
+                            a:hover {
+                                background-color: rgba($color: $clr-primario, $alpha: 0.5);
+                                color: $clr-texto;
+                                transition: 0.1s ease;
+                            }
 
-                                    li {
+                            a:active {
+                                background-color: $clr-primario;
+                                color: $clr-fondo;
+                            }
 
-                                        a.dropdown-item {
-                                            color: $clr-fondo;
-                                        }
+                            ul.dropdown-menu {
+                                margin: .5em 0;
+                                padding: 2px;
+                                background-color: $clr-primario;
+                                border: 1px solid $clr-acento;
+                                width: 100%;
 
-                                        a.dropdown-item:hover {
-                                            background-color: rgba($color: $clr-acento, $alpha: 0.5);
-                                            color: $clr-texto;
-                                            color: $clr-texto;
-                                        }
+                                li {
 
-                                        a.dropdown-item:active {
-                                            background-color: $clr-acento;
-                                        }
+                                    a.dropdown-item {
+                                        color: $clr-fondo;
+                                    }
+
+                                    a.dropdown-item:hover {
+                                        background-color: rgba($color: $clr-acento, $alpha: 0.5);
+                                        color: $clr-texto;
+                                        color: $clr-texto;
+                                    }
+
+                                    a.dropdown-item:active {
+                                        background-color: $clr-acento;
                                     }
                                 }
                             }
@@ -407,79 +486,77 @@ body {
                 }
             }
         }
+    }
 
-        main {
+    main {
 
-            section {
-                margin-bottom: 5em;
+        // CARDS SECTION - SYSTEMS
+        article {
 
-                .content-wrap {
-                    box-sizing: border-box;
-                    max-width: 850px;
-                    margin-inline: auto;
-
-                    .bloque-texto {
-                        margin: 2em 2.5em;
-                    }
-
-                    article {
-
-                        // cards
-                        div.cards {
-                            flex-direction: row;
-                            padding-inline: 1em;
-                        }
-
-
-                        // cards skills (con grid)
-                        div.cards-skills-grid {
-                            display: grid;
-                            grid-template: 1fr 1fr / 1fr 1fr;
-                            grid-area: "reading" "listening"
-                                "writing" "speaking";
-                            padding-inline: auto;
-
-                            div.card {
-                                margin-inline: auto;
-
-
-                                .thumbnail {
-
-                                    img {}
-                                }
-
-                                h5 {}
-                            }
-                        }
-                    }
-                }
+            // cards
+            div.cards {
+                flex-direction: row;
+                padding-inline: 1em;
             }
 
-            // SIDEBAR - Sobre el Autor
-            aside.sobre-el-autor {
-                margin-top: 0;
-                display: block;
-                height: auto;
 
-                h3 {
+            // cards skills (con grid)
+            div.cards-skills-grid {
+                display: grid;
+                grid-template: 1fr 1fr / 1fr 1fr;
+                grid-area: "reading" "listening"
+                    "writing" "speaking";
+                padding-inline: auto;
+
+                div.card {
+                    margin-inline: auto;
                 }
+            }
+        }
 
-                .autor-foto-texto {
-                    display: contents;
 
-                    .foto-autor {
-                        width: 70%;
-                        max-width: 250px;
-                    }
+        // SECCIÓN PRINCIPAL
+        section {
+            margin-bottom: 5em;
 
-                    .autor-texto {
-                        text-align: justify;
-                        padding: 0 1.2em;
+            .content-wrap {
+                box-sizing: border-box;
+                max-width: 900px;
+                margin-inline: auto;
 
-                    }
+                .bloque-texto {
+                    margin: 2em 2.5em;
                 }
 
             }
         }
+
+
+
+        // SIDEBAR - Sobre el Autor
+        aside.sobre-el-autor {
+            margin-top: 0;
+            display: block;
+            height: auto;
+
+            h3 {}
+
+            .autor-foto-texto {
+                display: contents;
+
+                .foto-autor {
+                    width: 70%;
+                    max-width: 250px;
+                }
+
+                .autor-texto {
+                    text-align: justify;
+                    padding: 0 1.2em;
+
+                }
+            }
+
+        }
     }
+
 }

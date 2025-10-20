@@ -12,7 +12,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
 
 <body>
@@ -21,15 +20,18 @@
         <nav class="navbar navbar-expand-lg sticky-top py-lg-0">
             <div class="container-xl">
 
-                <a class="navbar-brand" href="./index.html"> <img src="./img/Logo-no-background.png" alt="logo" class="logo"> </a>
+                <a class="navbar-brand" href="./index.html"> <img src="./img/Logo-no-background.png" alt="logo"
+                        class="logo"> </a>
 
                 <!-- hamburger button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Navbar Responsive -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
 
                     <!-- X button -->
                     <div class="offcanvas-header">
@@ -40,35 +42,36 @@
                     <div class="offcanvas-body">
 
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            
+
                             <!-- Dropdown de Systems -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="./systems.html" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="./systems.html" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Language Systems
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./systems.html#pronunciation">Pronunciation</a></li>
+                                    <li><a class="dropdown-item" href="./systems.html#pronunciation">Pronunciation</a>
+                                    </li>
                                     <li><a class="dropdown-item" href="./systems.html#vocabulary">Vocabulary</a></li>
                                     <li><a class="dropdown-item" href="./systems.html#grammar">Grammar</a></li>
                                 </ul>
                             </li>
                             <!-- Dropdwon de Skills  -->
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" href="./skills.html" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="./skills.html" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     English Skills
                                 </a>
                                 <ul class="dropdown-menu">
                                     <h6 class="skills">Receptive Skills</h6>
-                                    <li><a class="dropdown-item" href="#">Listening</a></li>
-                                    <li><a class="dropdown-item" href="#">Reading</a></li>
+                                    <li><a class="dropdown-item" href="./skills.html/listening">Listening</a></li>
+                                    <li><a class="dropdown-item" href="./skills.html/reading">Reading</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                     <h6 class="skills">Productive Skills</h6>
-                                    <li><a class="dropdown-item" href="#">Speaking</a></li>
-                                    <li><a class="dropdown-item" href="#">Writing</a></li>
+                                    <li><a class="dropdown-item" href="./skills.html/speaking">Speaking</a></li>
+                                    <li><a class="dropdown-item" href="./skills.html/listening">Writing</a></li>
                                 </ul>
                             </li>
 
@@ -77,7 +80,8 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./autoevaluacion.html">Auto-evaluación</a>
+                                <a class="nav-link active" aria-current="page"
+                                    href="./autoevaluacion.html">Auto-evaluación</a>
                             </li>
 
                         </ul>
@@ -88,46 +92,73 @@
         </nav>
     </header>
 
-    <main class="container-fluid">
+    <main class="container-lg">
         <div class="row">
-            <div class="layout col">
-                <h1>Language Systems</h1>
+            <section class="col">
 
-                <div class="portadas col">
-                    <div class="portada">
-                        <img src="./img/vocabulary.png" alt="thumbnail-vocab">
-                        <h4 class="portada-h4">Vocabulary</h4>
+                <div class="content-wrap">
+                    <h1 class="header">Language Systems</h1>
+
+                    <!-- SYSTEM CARDS  -->
+                    <article>
+                        <div class="cards cards-systems-flex">
+                            <a href="#vocabulary">
+                                <div class="card">
+                                    <div class="thumbnail">
+                                        <img src="./img/vocabulary.png" alt="thumbnail-vocab">
+                                    </div>
+                                    <h5 class="card-header">Vocabulary</h5>
+                                </div>
+                            </a>
+                            <a href="#pronunciation">
+                                <div class="card">
+                                    <div class="thumbnail">
+                                        <img src="./img/Pronunciation.png" alt="thumbnail-vocab">
+                                    </div>
+                                    <h5 class="card-header">Pronunciation</h5>
+                                </div>
+                            </a>
+                            <a href="#grammar">
+                                <div class="card">
+                                    <div class="thumbnail">
+                                        <img src="./img/Grammar.png" alt="thumbnail-vocab">
+                                    </div>
+                                    <h5 class="card-header">Grammar</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Parrafo - Qué son los Language Systems -->
+                    <div>
+                        <h3>¿Qué son los Language Systems?</h3>
+                        <p>Los systems son los componentes internos del idioma: <b>Vocabulary, Pronunciation y
+                                Grammar</b>.
+                        </p>
+
+                        <p>Dominar estos pilares te da precisión, claridad e inteligibilidad al usar las cuatro English
+                            skills
+                            (reading, listening, speaking, writing).</p>
+
+                        <h3>Cómo usarlos por nivel</h3>
+                        <ul>
+                            <li><b>A1-A2:</b>Empieza por systems para construir base (palabras de alta frecuencia,
+                                gramática
+                                esencial, sonidos clave).</li>
+                            <li><b>B1-C1</b>usa systems para corregir errores, ampliar registro y automatizar
+                                estructuras.
+                            </li>
+                        </ul>
                     </div>
-                    <div class="portada">
-                        <img src="./img/Pronunciation.png" alt="thumbnail-vocab">
-                        <h4 class="portada-h4">Pronunciation</h4>
-                    </div>
-                    <div class="portada">
-                        <img src="./img/Grammar.png" alt="thumbnail-vocab">
-                        <h4 class="portada-h4">Grammar</h4>
-                    </div>
-                </div>
 
-                <h3>¿Qué son los Language Systems?</h3>
-                <p>Los systems son los componentes internos del idioma: <b>Vocabulary, Pronunciation y Grammar</b>.</p>
+                    <!-- ----- DROPDOWN SISTEMAS DEL LENGUAJE ------- -->
 
-                <p>Dominar estos pilares te da precisión, claridad e inteligibilidad al usar las cuatro English skills
-                    (reading, listening, speaking, writing).</p>
+                    <!-- SISTEMAS - Vocabulary dropdown -->
+                    <section>
+                        <details class="systems-skills-dropdown">
+                            <summary class="dropdown-header">VOCABULARY</summary>
 
-                <h3>Cómo usarlos por nivel</h3>
-                <ul>
-                    <li><b>A1-A2:</b>Empieza por systems para construir base (palabras de alta frecuencia, gramática
-                        esencial, sonidos clave).</li>
-                    <li><b>B1-C1</b>usa systems para corregir errores, ampliar registro y automatizar estructuras.</li>
-
-                    <section id="vocabulary">
-
-                        <div>
-                            <details>
-                                <summary class="dropdown-h2">VOCABULARY</summary>
-
-                                <img src="/img/vocabulary.png" alt="vocabulary">
-
+                            <div class="system-skill-body" id="vocabulary">
                                 <p>El vocabulario es el corazón del idioma. Es lo que te permite nombrar objetos,
                                     expresar ideas, describir emociones y entender el mundo que te rodea en inglés.
                                 </p>
@@ -138,377 +169,409 @@
                                     contextualizada, usando frases, imágenes, repetición espaciada (SRS), y
                                     conectándolo con tus propios intereses o rutinas.</p>
 
+
+                                <!-- Teoría  -->
                                 <div>
-                                    <details>
+                                    <details class="system-skill-drop">
                                         <summary>INDICE - LO QUE DEBES SABER</summary>
 
-                                        <h3>Palabras más frecuentes</h3>
-                                        <ul>
-                                            <li>2000 Most Frequently used Words in English</li>
-                                            <li>Academix Word List (AWL)</li>
-                                            <li>Business Vocabulary</li>
-                                            <li>Vocabulary by CEFR level (A1-C2)</li>
-                                            <li>Topic-based Vocabulary (travel, food, emotions, etc.)</li>
-                                        </ul>
+                                        <div class="system-skill-drop-body">
+                                            <h3>Palabras más frecuentes</h3>
+                                            <ul>
+                                                <li><a href="#">2000 Most Frequently used Words in English</a></li>
+                                                <li><a href="#">Academix Word List (AWL)</a></li>
+                                                <li><a href="#">Business Vocabulary</a></li>
+                                                <li><a href="#">Vocabulary by CEFR level (A1-C2)</a></li>
+                                                <li><a href="#">Topic-based Vocabulary (travel, food, emotions, etc.)</a></li>
+                                            </ul>
 
-                                        <h3>Word Formation</h3>
-                                        <ul>
-                                            <li>Prefixes (un-, re-, dis-)</li>
-                                            <li>Suffixes (-ful, -less, -ness)</li>
-                                            <li>Compound Words (post office, babysitter)</li>
-                                            <li>Conversation (email → to email)</li>
-                                        </ul>
+                                            <h3>Word Formation</h3>
+                                            <ul>
+                                                <li><a href="#">Prefixes (un-, re-, dis-)</a></li>
+                                                <li><a href="#">Suffixes (-ful, -less, -ness)</a></li>
+                                                <li><a href="#">Compound Words (post office, babysitter)</a></li>
+                                                <li><a href="#">Conversation (email → to email)</a></li>
+                                            </ul>
 
-                                        <h3>Phrasal Verbs</h3>
-                                        <ul>
-                                            <li>Verb + Particle (look after, get up)</li>
-                                            <li>Separable vs Inseparable</li>
-                                            <li>Literal vs Idiomatic meanings</li>
-                                            <li>Academic Phrasal Verbs</li>
-                                        </ul>
+                                            <h3>Phrasal Verbs</h3>
+                                            <ul>
+                                                <li><a href="#">Verb + Particle (look after, get up)</a></li>
+                                                <li><a href="#">Separable vs Inseparable</a></li>
+                                                <li><a href="#">Literal vs Idiomatic meanings</a></li>
+                                                <li><a href="#">Academic Phrasal Verbs</a></li>
+                                            </ul>
 
-                                        <h3>Idioms and expressions</h3>
-                                        <ul>
-                                            <li>Common Idioms (hit the books, bite the bullet)</li>
-                                            <li>Proverbs, Figurative Language</li>
-                                            <li>Slang idioms and Colloquialisms (expresiones coloquiales)</li>
-                                        </ul>
+                                            <h3>Idioms and expressions</h3>
+                                            <ul>
+                                                <li><a href="#">Common Idioms (hit the books, bite the bullet)</a></li>
+                                                <li><a href="#">Proverbs, Figurative Language</a></li>
+                                                <li><a href="#">Slang idioms and Colloquialisms (expresiones coloquiales)</a></li>
+                                            </ul>
 
-                                        <h3>Functional Language (lenguaje funcional)</h3>
-                                        <ul>
-                                            <li>Asking for Directions</li>
-                                            <li>Ordering Food</li>
-                                            <li>Making introductions / Getting to know people</li>
-                                            <li>Apologizing / Thanking / Complaints</li>
-                                            <li>Making suggestions / offers / Complaints</li>
-                                            <li>Telephone Language</li>
-                                            <li>Small Talk and Social Interactions</li>
-                                        </ul>
+                                            <h3>Functional Language (lenguaje funcional)</h3>
+                                            <ul>
+                                                <li><a href="#">Asking for Directions</a></li>
+                                                <li><a href="#">Ordering Food</a></li>
+                                                <li><a href="#">Making introductions / Getting to know people</a></li>
+                                                <li><a href="#">Apologizing / Thanking / Complaints</a></li>
+                                                <li><a href="#">Making suggestions / offers / Complaints</a></li>
+                                                <li><a href="#">Telephone Language</a></li>
+                                                <li><a href="#">Small Talk and Social Interactions</a></li>
+                                            </ul>
 
-                                        <h3>Appropriacy (registro del lenguaje)</h3>
-                                        <ul>
-                                            <li>Formal / Neutral / Informal Vocabulary</li>
-                                            <li>Slang and Taboo Expressions</li>
-                                            <li>Euphemisms and Style Awareness</li>
-                                        </ul>
+                                            <h3>Appropriacy (registro del lenguaje)</h3>
+                                            <ul>
+                                                <li><a href="#">Formal / Neutral / Informal Vocabulary</a></li>
+                                                <li><a href="#">Slang and Taboo Expressions</a></li>
+                                                <li><a href="#">Euphemisms and Style Awareness</a></li>
+                                            </ul>
 
-                                        <h3>Collocations</h3>
-                                        <ul>
-                                            <li><b>Adjective + Noun</b> (strong coffee, heavy rain)</li>
-                                            <li><b>Verb + Noun</b> (make a decision, do homework)</li>
-                                            <li><b>Verb + Preposition</b> (look at, depend on)</li>
-                                            <li><b>Noun + Noun</b>(job interview, language barrier)</li>
-                                            <li><b>Adverb + Adjective</b> (deeply disappointed, highly likely)</li>
-                                        </ul>
+                                            <h3>Collocations</h3>
+                                            <ul>
+                                                <li><a href="#"><b>Adjective + Noun</b> (strong coffee, heavy rain)</a></li>
+                                                <li><a href="#"><b>Verb + Noun</b> (make a decision, do homework)</a></li>
+                                                <li><a href="#"><b>Verb + Preposition</b> (look at, depend on)</a></li>
+                                                <li><a href="#"><b>Noun + Noun</b>(job interview, language barrier)</a></li>
+                                                <li><a href="#"><b>Adverb + Adjective</b> (deeply disappointed, highly likely)</a></li>
+                                            </ul>
 
-                                        <h3>False Friends / False Cognates</h3>
-                                        <ul>
-                                            <li>Spanish-English (actually, sensible, etc.)</li>
-                                            <li>Common traps with examples</li>
-                                        </ul>
+                                            <h3>False Friends / False Cognates</h3>
+                                            <ul>
+                                                <li><a href="#">Spanish-English (actually, sensible, etc.)</a></li>
+                                                <li><a href="#">Common traps with examples</a></li>
+                                            </ul>
 
-                                        <h3>Thesaurus & Synonyms</h3>
-                                        <ul>
-                                            <li>Usar sinónimos con matices</li>
-                                            <li>Parónimos y confusiones frecuentes</li>
-                                            <li>Palabras con múltiples significados</li>
-                                        </ul>
+                                            <h3>Thesaurus & Synonyms</h3>
+                                            <ul>
+                                                <li><a href="#">Usar sinónimos con matices</a></li>
+                                                <li><a href="#">Parónimos y confusiones frecuentes</a></li>
+                                                <li><a href="#">Palabras con múltiples significados</a></li>
+                                            </ul>
 
-                                        <h3>Pronunciation Tipos for Vocabulary</h3>
-                                        <ul>
-                                            <li>Word Stress Awareness in new words <a href="#word-stress">Ver
-                                                    Pronunciation > Word Stress</a></li>
-                                            <li>Schwa in Common Vocabulary</li>
-                                            <li>Common Pronunciation errors in Vocabulary</li>
-                                        </ul>
+                                            <h3>Pronunciation Tipos for Vocabulary</h3>
+                                            <ul>
+                                                <li><a href="#">Word Stress Awareness in new words <a href="#word-stress</a>">Ver
+                                                        Pronunciation > Word Stress</a></li>
+                                                <li><a href="#">Schwa in Common Vocabulary</a></li>
+                                                <li><a href="#">Common Pronunciation errors in Vocabulary</a></li>
+                                            </ul>
+                                        </div>
 
                                     </details>
                                 </div>
+
+                                <!-- Actividades y Estratégias -->
                                 <div>
-                                    <details>
-                                        <summary class="disabeled-dropdown">ACTIVIDADES Y ESTRATÉGIAS (por nivel)
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">ACTIVIDADES Y ESTRATÉGIAS (por nivel)
                                         </summary>
-
-                                    </details>
-                                </div>
-                                <div>
-                                    <details>
-                                        <summary class="disabeled-dropdown">ERROES COMUNES</summary>
-                                    </details>
-                                </div>
-                                <div>
-                                    <details>
-                                        <summary class="disabeled-dropdown">RUTA DE ESTUDIOS POR NIVEL</summary>
-                                    </details>
-                                </div>
-                                <div>
-                                    <details>
-                                        <summary class="disabeled-dropdown">RECURSOS PARA PROFUNDIZAR</summary>
                                     </details>
                                 </div>
 
-                            </details>
-                        </div>
+                                <!-- Errores que comenten los estudiantes -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">ERROES COMUNES</summary>
+                                    </details>
+                                </div>
 
+                                <!-- Ruta de estudios (por nivel) -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">RUTA DE ESTUDIOS POR NIVEL</summary>
+                                    </details>
+                                </div>
+
+                                <!-- Recursos por tema -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">RECURSOS PARA PROFUNDIZAR</summary>
+                                    </details>
+                                </div>
+                            </div>
+
+                        </details>
                     </section>
 
-                    <section id="pronunciation">
-                        <div>
-                            <div>
-                                <details>
-                                    <summary class="dropdown-h2">PRONUNCIATION</summary>
+                    <!-- SISTEMAS - Pronunciation dropdown -->
+                    <section>
 
-                                    <img src="/img/Pronunciation.png" alt="thumbnail-pronunciation">
-                                    <p>Aprender buena pronunciación no es imitar un acento perfecto, sino lograr que te
-                                        entiendan con claridad. Para eso, necesitas dominar los sonidos del inglés,
-                                        saber dónde va el énfasis en las palabras (word stress), y usar una entonación
-                                        natural en tus frases.</p>
-                                    <p>Si estudias por tu cuenta, trabaja la pronunciación de forma práctica: escucha,
-                                        repite, graba tu voz, imita patrones reales y usa herramientas como el IPA solo
-                                        como apoyo, no como fin. La meta es sonar natural, no perfecto.</p>
+                        <details class="systems-skills-dropdown">
+                            <summary class="dropdown-header">PRONUNCIATION</summary>
 
-                                    <div>
-                                        <details>
-                                            <summary>INDICE - LO QUE DEBES SABER</summary>
+                            <div class="system-skill-body" id="pronunciation">
+                                <p>Aprender buena pronunciación no es imitar un acento perfecto, sino lograr que te
+                                    entiendan con claridad. Para eso, necesitas dominar los sonidos del inglés,
+                                    saber dónde va el énfasis en las palabras (word stress), y usar una entonación
+                                    natural en tus frases.</p>
+                                <p>Si estudias por tu cuenta, trabaja la pronunciación de forma práctica: escucha,
+                                    repite, graba tu voz, imita patrones reales y usa herramientas como el IPA solo
+                                    como apoyo, no como fin. La meta es sonar natural, no perfecto.</p>
 
+                                <!-- Teoría -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary>INDICE - LO QUE DEBES SABER</summary>
+
+                                        <div class="system-skill-drop-body">
                                             <h3>IPA (International Phonetic Alphabet)</h3>
                                             <ul>
-                                                <li>Tabla de Sonidos IPA</li>
-                                                <li>Símbolos consonanticos y vocálicos</li>
-                                                <li>Sílabas</li>
-                                                <li>Cómo leer diccionarios fonéticos</li>
+                                                <li><a href="#">Tabla de Sonidos IPA</a></li>
+                                                <li><a href="#">Símbolos consonanticos y vocálicos</a></li>
+                                                <li><a href="#">Sílabas</a></li>
+                                                <li><a href="#">Cómo leer diccionarios fonéticos</a></li>
                                             </ul>
                                             <h3>Consonant Sounds</h3>
                                             <ul>
-                                                <li>Pares problemáticos: /b/ vs /v/, /s/ vs /z/</li>
-                                                <li>Sonidos no existentes en español</li>
-                                                <li>Ending sounds (ed, /s/, /z/ pronunciations) </li>
-                                                <li>Plosives, Fricatives, Nasal, Affricatives</li>
+                                                <li><a href="#">Pares problemáticos: /b/ vs /v/, /s/ vs /z/</a></li>
+                                                <li><a href="#">Sonidos no existentes en español</a></li>
+                                                <li><a href="#">Ending sounds (ed, /s/, /z/ pronunciations) </a></li>
+                                                <li><a href="#">Plosives, Fricatives, Nasal, Affricatives</a></li>
                                             </ul>
                                             <h3>Vowel Sounds</h3>
                                             <ul>
-                                                <li>Short vs Long vowes (/ɪ/ vs /i:/)</li>
-                                                <li>Diphthongs: (/aɪ/, /eɪ/, /əʊ/, etc.)</li>
-                                                <li>Schwa /ə/</li>
+                                                <li><a href="#">Short vs Long vowes (/ɪ/ vs /i:/)</a></li>
+                                                <li><a href="#">Diphthongs: (/aɪ/, /eɪ/, /əʊ/, etc.)</a></li>
+                                                <li><a href="#">Schwa /ə/</a></li>
                                             </ul>
                                             <h3 id="word-stress">Word Stress</h3>
                                             <ul>
-                                                <li>Stress in multi-syllable words</li>
-                                                <li>Stress shift in word families (REcord vs reCORD)</li>
-                                                <li>Primary stress and syllable patterns</li>
-                                                <li>Sentence-level stress (content vs function)</li>
-                                                <li>Prefix/Suffix stress rules</li>
+                                                <li><a href="#">Stress in multi-syllable words</a></li>
+                                                <li><a href="#">Stress shift in word families (REcord vs reCORD)</a></li>
+                                                <li><a href="#">Primary stress and syllable patterns</a></li>
+                                                <li><a href="#">Sentence-level stress (content vs function)</a></li>
+                                                <li><a href="#">Prefix/Suffix stress rules</a></li>
                                             </ul>
                                             <h3>Connected Speech</h3>
                                             <ul>
-                                                <li>Linking sounds (consonant-vowel)</li>
-                                                <li>Elision (loss of sounds)</li>
-                                                <li>Assimilation (sound blending)</li>
-                                                <li>Intrusion (extra sounds in fluent speech)</li>
-                                                <li>Glottal stops and flapping</li>
+                                                <li><a href="#">Linking sounds (consonant-vowel)</a></li>
+                                                <li><a href="#">Elision (loss of sounds)</a></li>
+                                                <li><a href="#">Assimilation (sound blending)</a></li>
+                                                <li><a href="#">Intrusion (extra sounds in fluent speech)</a></li>
+                                                <li><a href="#">Glottal stops and flapping</a></li>
                                             </ul>
                                             <h3>Rhythm and Weak Forms</h3>
                                             <ul>
-                                                <li>Stress-timed rhythm</li>
-                                                <li>Common reduced forms ("gonna", "wanna")</li>
-                                                <li>Emphasis and contrastive stress</li>
+                                                <li><a href="#">Stress-timed rhythm</a></li>
+                                                <li><a href="#">Common reduced forms ("gonna", "wanna")</a></li>
+                                                <li><a href="#">Emphasis and contrastive stress</a></li>
                                             </ul>
+                                        </div>
 
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summary class="disabeled-dropdown">ACTIVIDADES Y ESTRATÉGIAS (por nivel)
-                                            </summary>
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summary class="disabeled-dropdown">ERROES COMUNES</summary>
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summary class="disabeled-dropdown">RUTA DE ESTUDIOS POR NIVEL</summary>
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summary class="disabeled-dropdown">RECURSOS PARA PROFUNDIZAR</summary>
-                                        </details>
-                                    </div>
+                                    </details>
+                                </div>
 
-                                </details>
+                                <!-- Actividades y Estratégias -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">ACTIVIDADES Y ESTRATÉGIAS (por nivel)
+                                        </summary>
+                                    </details>
+                                </div>
+
+                                <!-- Erroes comunes -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">ERROES COMUNES</summary>
+                                    </details>
+                                </div>
+
+                                <!-- Ruta de estudios por nivel -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">RUTA DE ESTUDIOS POR NIVEL</summary>
+                                    </details>
+                                </div>
+
+                                <!-- Recursos del tema -->
+                                <div>
+                                    <details  class="system-skill-drop">
+                                        <summary class="disabled-dropdown">RECURSOS PARA PROFUNDIZAR</summary>
+                                    </details>
+                                </div>
                             </div>
-                        </div>
+
+                        </details>
                     </section>
 
-                    <section id="grammar">
-                        <div>
-                            <div>
-                                <details>
-                                    <summary class="dropdown-h2">GRAMMAR</summary>
+                    <!-- SISTEMAS - grammar dropdown -->
+                    <section>
+                        <details class="systems-skills-dropdown">
+                            <summary class="dropdown-header">GRAMMAR</summary>
 
-                                    <img src="./img/Grammar.png" alt="thumbnail-grammar">
-                                    <p>La gramática es la estructura que da forma al idioma. Es lo que permite que las
-                                        palabras tengan <b>sentido y orden</b>.</p>
-                                    <p>No es necesario memorizar reglas interminables, pero sí entender cómo se
-                                        construyen las frases: <b>quién hace qué, cuándo, cómo y por qué</b>. Así podrás
-                                        comunicarte con claridad, precisión y confianza.</p>
-                                    <p>Si estudias por tu cuenta, lo ideal es aprender la gramática en <b>contexto</b>,
-                                        aplicarla en actividades reales, y revisar tus errores para entender cómo
-                                        mejorar. No necesitas saber todos los nombres gramaticales para hablar bien,
-                                        pero sí necesitas practicar con intención.</p>
+                            <div class="system-skill-body" id="grammar">
+                                <p>La gramática es la estructura que da forma al idioma. Es lo que permite que las
+                                    palabras tengan <b>sentido y orden</b>.</p>
+                                <p>No es necesario memorizar reglas interminables, pero sí entender cómo se
+                                    construyen las frases: <b>quién hace qué, cuándo, cómo y por qué</b>. Así podrás
+                                    comunicarte con claridad, precisión y confianza.</p>
+                                <p>Si estudias por tu cuenta, lo ideal es aprender la gramática en <b>contexto</b>,
+                                    aplicarla en actividades reales, y revisar tus errores para entender cómo
+                                    mejorar. No necesitas saber todos los nombres gramaticales para hablar bien,
+                                    pero sí necesitas practicar con intención.</p>
 
-                                    <div>
-                                        <details>
-                                            <summary>INDICE - LO QUE DEBES SABER</summary>
 
+                                <!-- Teoría -->
+                                <div>
+                                    <details  class="system-skill-drop">
+                                        <summary>INDICE - LO QUE DEBES SABER</summary>
+
+                                        <div class="system-skill-drop-body">
                                             <h3>Parts of Speech</h3>
 
                                             <h4>Articles</h4>
                                             <ul>
-                                                <li>Indefinite (a, an)</li>
-                                                <li>Definite (the)</li>
-                                                <li>Zero article</li>
+                                                <li> <a href="#">Indefinite (a, an)</a></li>
+                                                <li> <a href="#">Definite (the)</a></li>
+                                                <li> <a href="#">Zero article</a></li>
                                             </ul>
 
                                             <h4>Pronouns</h4>
                                             <ul>
-                                                <li>Personal</li>
-                                                <li>Possessive/li>
-                                                <li>Reflexive</li>
-                                                <li>Demonstrative</li>
-                                                <li>Indefinite</li>
-                                                <li>Relative</li>
-                                                <li>Interrogative</li>
+                                                <li> <a href="#">Personal</a></li>
+                                                <li> <a href="#">Possessive</a></li>
+                                                <li> <a href="#">Reflexive</a></li>
+                                                <li> <a href="#">Demonstrative</a></li>
+                                                <li> <a href="#">Indefinite</a></li>
+                                                <li> <a href="#">Relative</a></li>
+                                                <li> <a href="#">Interrogative</a></li>
                                             </ul>
                                             <h4>Nouns</h4>
                                             <ul>
-                                                <li>Countable and uncountable</li>
-                                                <li>Irregular plurals</li>
-                                                <li>Abstract vs concrete nouns</li>
-                                                <li>Compound nouns</li>
-                                                <li>Possessive forms ('s, of)</li>
+                                                <li> <a href="#">Countable and uncountable</a></li>
+                                                <li> <a href="#">Irregular plurals</a></li>
+                                                <li> <a href="#">Abstract vs concrete nouns</a></li>
+                                                <li> <a href="#">Compound nouns</a></li>
+                                                <li> <a href="#">Possessive forms ('s, of)</a></li>
                                             </ul>
                                             <h4>Verbs</h4>
                                             <ul>
-                                                <li>Verb "To be"</li>
-                                                <li>Regular and Irregular verbs</li>
-                                                <li>Tenses: Present, Past, Future</li>
-                                                <li>Aspects: simple, continuous, perfect</li>
-                                                <li>Modal verbs (can, should, must)</li>
-                                                <li>Passive voice</li>
-                                                <li>Causative forms (have/get something done)</li>
-                                                <li>Reported speech</li>
-                                                <li>Conditionals (0-3, mixed)</li>
-                                                <li>Verb patterns (like doing / want to do)</li>
-                                                <li>Gerund vs Infinitive</li>
-                                                <li>Stative vs Dynamic verbs</li>
+                                                <li> <a href="#">Verb "To be"</a></li>
+                                                <li> <a href="#">Regular and Irregular verbs</a></li>
+                                                <li> <a href="#">Tenses: Present, Past, Future</a></li>
+                                                <li> <a href="#">Aspects: simple, continuous, perfect</a></li>
+                                                <li> <a href="#">Modal verbs (can, should, must)</a></li>
+                                                <li> <a href="#">Passive voice</a></li>
+                                                <li> <a href="#">Causative forms (have/get something done)</a></li>
+                                                <li> <a href="#">Reported speech</a></li>
+                                                <li> <a href="#">Conditionals (0-3, mixed)</a></li>
+                                                <li> <a href="#">Verb patterns (like doing / want to do)</a></li>
+                                                <li> <a href="#">Gerund vs Infinitive</a></li>
+                                                <li> <a href="#">Stative vs Dynamic verbs</a></li>
                                             </ul>
                                             <h4>Adjectives</h4>
                                             <ul>
-                                                <li>Adjective order</li>
-                                                <li>Description vs opinion adjectives</li>
-                                                <li>Participial adjectives (-ed, -ing)</li>
-                                                <li>Comparatives and Superlatives</li>
+                                                <li> <a href="#">Adjective order</a></li>
+                                                <li> <a href="#">Description vs opinion adjectives</a></li>
+                                                <li> <a href="#">Participial adjectives (-ed, -ing)</a></li>
+                                                <li> <a href="#">Comparatives and Superlatives</a></li>
                                             </ul>
                                             <h4>Adverbs</h4>
                                             <ul>
-                                                <li>Frequency, Manner, Time, Degree</li>
-                                                <li>Position of adverbs</li>
-                                                <li>Adverbs of certainty and degree</li>
-                                                <li>Intensifiers and downtones</li>
+                                                <li> <a href="#">Frequency, Manner, Time, Degree</a></li>
+                                                <li> <a href="#">Position of adverbs</a></li>
+                                                <li> <a href="#">Adverbs of certainty and degree</a></li>
+                                                <li> <a href="#">Intensifiers and downtones</a></li>
                                             </ul>
                                             <h4>Determiners</h4>
                                             <ul>
-                                                <li>Quantifiers (some, many, few)</li>
-                                                <li>Demonstrative (this, that)</li>
-                                                <li>Possessive adjectives</li>
-                                                <li>Articles (revisited as determiners)</li>
+                                                <li> <a href="#">Quantifiers (some, many, few)</a></li>
+                                                <li> <a href="#">Demonstrative (this, that)</a></li>
+                                                <li> <a href="#">Possessive adjectives</a></li>
+                                                <li> <a href="#">Articles (revisited as determiners)</a></li>
                                             </ul>
                                             <h4>Prepositions</h4>
                                             <ul>
-                                                <li>Prepositions of time (at, in, on)</li>
-                                                <li>Prepositions of place (under, between, above)</li>
-                                                <li>Prepositions of movement (into, onto, across)</li>
-                                                <li>Prepositions + gerund</li>
-                                                <li>Dependent prepositions</li>
+                                                <li> <a href="#">Prepositions of time (at, in, on)</a></li>
+                                                <li> <a href="#">Prepositions of place (under, between, above)</a></li>
+                                                <li> <a href="#">Prepositions of movement (into, onto, across)</a></li>
+                                                <li> <a href="#">Prepositions + gerund</a></li>
+                                                <li> <a href="#">Dependent prepositions</a></li>
                                             </ul>
                                             <h4>Conjunctions</h4>
                                             <ul>
-                                                <li>Coordinating conjunctions</li>
-                                                <li>Subordinating conjunctions</li>
-                                                <li>Correlative conjunctions</li>
+                                                <li> <a href="#">Coordinating conjunctions</a></li>
+                                                <li> <a href="#">Subordinating conjunctions</a></li>
+                                                <li> <a href="#">Correlative conjunctions</a></li>
                                             </ul>
 
                                             <h3>Phrase Types (Frases o Sintagmas)</h3>
                                             <ul>
-                                                <li>Noun Phrases (NP) → The tall man with glasses</li>
-                                                <li>Verb Phrases (VP) → has been working hard</li>
-                                                <li>Adjective Phrases (AdjP) → very proud of her</li>
-                                                <li>Adverbial Phrases (AdvP) → extremely quickly</li>
-                                                <li>Prepositional Phrases (PP) → under the table</li>
-                                                <li>Head word + modifiers</li>
-                                                <li> Role of phrases within clauses</li>
+                                                <li> <a href="#">Noun Phrases (NP) → The tall man with glasses</a></li>
+                                                <li> <a href="#">Verb Phrases (VP) → has been working hard</a></li>
+                                                <li> <a href="#">Adjective Phrases (AdjP) → very proud of her</a></li>
+                                                <li> <a href="#">Adverbial Phrases (AdvP) → extremely quickly</a></li>
+                                                <li> <a href="#">Prepositional Phrases (PP) → under the table</a></li>
+                                                <li> <a href="#">Head word + modifiers</a></li>
+                                                <li> <a href="#"> Role of phrases within clauses</a></li>
                                             </ul>
                                             <h3>Sentence Structure</h3>
                                             <ul>
-                                                <li>SVO word order</li>
-                                                <li>Simple / Compound / Complex sentences</li>
-                                                <li>Clauses: main and subordinate</li>
-                                                <li>Embedded questions and inversion</li>
+                                                <li> <a href="#">SVO word order</a></li>
+                                                <li> <a href="#">Simple / Compound / Complex sentences</a></li>
+                                                <li> <a href="#">Clauses: main and subordinate</a></li>
+                                                <li> <a href="#">Embedded questions and inversion</a></li>
                                             </ul>
                                             <h3>Negation and Questions</h3>
                                             <ul>
-                                                <li>Negative structures (don't, can't, never)</li>
-                                                <li>Double negatives (usage and avoidance)</li>
-                                                <li>Yes/No and WH- questions</li>
-                                                <li>Tag questions</li>
-                                                <li>Negative questions (Didn't you go?)</li>
+                                                <li> <a href="#">Negative structures (don't, can't, never)</a></li>
+                                                <li> <a href="#">Double negatives (usage and avoidance)</a></li>
+                                                <li> <a href="#">Yes/No and WH- questions</a></li>
+                                                <li> <a href="#">Tag questions</a></li>
+                                                <li> <a href="#">Negative questions (Didn't you go?)</a></li>
                                             </ul>
                                             <h3>Special Structures</h3>
                                             <ul>
-                                                <li>There is / There are</li>
-                                                <li>It's + adjective + to verb (it's important to study)</li>
-                                                <li>Used to / Be used to</li>
-                                                <li>Have got / Be used to</li>
-                                                <li>Cleft sentences and emphasis (What I need is)</li>
-                                                <li>Inversión for emphasis (Never have I seen)</li>
-                                                <li>Ellipsis and substitution</li>
+                                                <li> <a href="#">There is / There are</a></li>
+                                                <li> <a href="#">It's + adjective + to verb (it's important to study)</a></li>
+                                                <li> <a href="#">Used to / Be used to</a></li>
+                                                <li> <a href="#">Have got / Be used to</a></li>
+                                                <li> <a href="#">Cleft sentences and emphasis (What I need is)</a></li>
+                                                <li> <a href="#">Inversión for emphasis (Never have I seen)</a></li>
+                                                <li> <a href="#">Ellipsis and substitution</a></li>
                                             </ul>
+                                        </div>
 
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summary class="disabeled-dropdown">ACTIVIDADES Y ESTRATÉGIAS (por nivel)
-                                            </summary>
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summar class="disabeled-dropdown">ERROES COMUNES</summary>
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summary class="disabeled-dropdown">RUTA DE ESTUDIOS POR NIVEL</summary>
-                                        </details>
-                                    </div>
-                                    <div>
-                                        <details>
-                                            <summary class="disabeled-dropdown">RECURSOS PARA PROFUNDIZAR</summary>
-                                        </details>
-                                    </div>
+                                    </details>
+                                </div>
 
-                                </details>
+                                <!-- Actividades y Estrategias -->
+                                <div>
+                                    <details  class="system-skill-drop">
+                                        <summary class="disabled-dropdown">ACTIVIDADES Y ESTRATÉGIAS (por nivel)
+                                        </summary>
+                                    </details>
+                                </div>
+
+                                <!-- Errores comunes -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">ERRORES COMUNES</summary>
+                                    </details>
+                                </div>
+
+                                <!-- Ruta de estudios (por nivel) -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">RUTA DE ESTUDIOS POR NIVEL</summary>
+                                    </details>
+                                </div>
+
+                                <!-- Recursos por tema -->
+                                <div>
+                                    <details class="system-skill-drop">
+                                        <summary class="disabled-dropdown">RECURSOS PARA PROFUNDIZAR</summary>
+                                    </details>
+                                </div>
                             </div>
-                        </div>
+
+                        </details>
                     </section>
-            </div>
+                </div>
+            </section>
         </div>
     </main>
+
     <footer>
         <p>© 2025 Learn English Hub </p>
         <p><b>Coderhouse: Entrega 3 — Molina Rubio</b></p>
