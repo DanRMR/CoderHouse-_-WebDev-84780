@@ -217,7 +217,9 @@ main {
                         object-fit: cover;
                         object-position: center;
                         align-self: center;
-                        margin: 1em 0 0 0;
+                        margin: 0;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
                         height: auto;
                     }
                 }
@@ -227,7 +229,9 @@ main {
                     font-size: 1.2em;
                     color: $clr-texto;
                     margin: 5px;
-                    margin-bottom: .5em;
+                    background-color: $clr-acento;
+                    border-style: none;
+                    text-align: center;
                 }
             }
         }
@@ -502,6 +506,14 @@ footer {
                     
                     .card {
                         height: clamp(140px, 18vw, 200px);
+                        
+                        .thumbnail {
+                            
+                            img {
+                                height: 100%;
+                                
+                            }
+                        }
 
                     }
                 }

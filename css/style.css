@@ -152,14 +152,18 @@ main article div.cards div.card .thumbnail img {
   object-fit: cover;
   object-position: center;
   align-self: center;
-  margin: 1em 0 0 0;
+  margin: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   height: auto;
 }
 main article div.cards div.card h5.card-header {
   font-size: 1.2em;
   color: #1F2A37;
   margin: 5px;
-  margin-bottom: 0.5em;
+  background-color: #b6f3f1;
+  border-style: none;
+  text-align: center;
 }
 main aside.sobre-el-autor {
   background-color: #b6f3f1;
@@ -338,6 +342,9 @@ footer p {
   }
   main article div.cards-systems-flex a .card {
     height: clamp(140px, 18vw, 200px);
+  }
+  main article div.cards-systems-flex a .card .thumbnail img {
+    height: 100%;
   }
   main article div.cards-skills-grid {
     display: grid;
