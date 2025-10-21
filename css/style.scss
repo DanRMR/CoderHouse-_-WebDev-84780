@@ -350,6 +350,73 @@ details.systems-skills-dropdown {
 
 }
 
+// ----- cards de recursos.html -------
+
+.columns-headers {
+
+    div {
+        background-color: $clr-gris-claro;
+        border-radius: 20px;
+        
+        h3 {
+            background-color: $clr-contraste;
+            color: $clr-fondo;
+            text-align: center;
+            
+        }
+        
+        section {
+            margin: 1em;
+            
+            
+            .dropdown-card {
+                box-shadow: 1px 3px 10px $clr-texto;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+
+
+                .thumbnail {
+                    height: auto;
+                    
+                    img {
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        width: 100%;
+                        object-fit: cover;
+    
+                    }
+                }
+
+                .dropdown-card-body {
+                    background-color: white;
+
+                    details {
+
+                        summary {
+                            background-color: $clr-acento;
+                            padding: 10px;
+                            font-weight: bold;
+                            font-size: 1.3em;
+                            box-shadow: 1px 5px 10px $clr-gris-claro;
+                            text-align: center;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
+
+                        ul {
+                            padding: 2em;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ---- algunos estilos de autoevaluacion.html -------
 .score-chart {
     display: flex;
     justify-content: center;
@@ -368,7 +435,7 @@ details.systems-skills-dropdown {
 }
 
 
-.nivel-real {
+.content-box {
     background-color: $clr-acento;
     margin: 3em 0;
 
@@ -388,6 +455,8 @@ details.systems-skills-dropdown {
     }
 
 }
+
+.dos-columnas {}
 
 //-----------------
 // FOOTER

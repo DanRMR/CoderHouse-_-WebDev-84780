@@ -253,6 +253,50 @@ details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-sk
   color: #cbcbcb;
 }
 
+.columns-headers div {
+  background-color: #cbcbcb;
+  border-radius: 20px;
+}
+.columns-headers div h3 {
+  background-color: #F16A70;
+  color: #fff;
+  text-align: center;
+}
+.columns-headers div section {
+  margin: 1em;
+}
+.columns-headers div section .dropdown-card {
+  box-shadow: 1px 3px 10px #1F2A37;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.columns-headers div section .dropdown-card .thumbnail {
+  height: auto;
+}
+.columns-headers div section .dropdown-card .thumbnail img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+}
+.columns-headers div section .dropdown-card .dropdown-card-body {
+  background-color: white;
+}
+.columns-headers div section .dropdown-card .dropdown-card-body details summary {
+  background-color: #b6f3f1;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.3em;
+  box-shadow: 1px 5px 10px #cbcbcb;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.columns-headers div section .dropdown-card .dropdown-card-body details ul {
+  padding: 2em;
+}
+
 .score-chart {
   display: flex;
   justify-content: center;
@@ -268,20 +312,20 @@ details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-sk
   background-color: #b6f3f1;
 }
 
-.nivel-real {
+.content-box {
   background-color: #b6f3f1;
   margin: 3em 0;
 }
-.nivel-real h2 {
+.content-box h2 {
   background-color: #0A998D;
   color: #fff;
   text-align: left;
   padding: 5px 1em;
 }
-.nivel-real div {
+.content-box div {
   padding: 1.5em;
 }
-.nivel-real div h3 {
+.content-box div h3 {
   color: #0A998D;
 }
 
