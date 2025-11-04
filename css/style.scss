@@ -1,10 +1,10 @@
 // Colores
-$clr-primario: #0A998D;
-$clr-acento: #b6f3f1;
-$clr-contraste: #F16A70;
-$clr-fondo: #fff;
-$clr-texto: #1F2A37;
-$clr-gris-claro: #cbcbcb;
+$color-primario: #0A998D;
+$color-acento: #b6f3f1;
+$color-contraste: #FF7D53 ; //#F16A70
+$color-fondo: #fff;
+$color-texto: #1F2A37;
+$color-gris-claro: #cbcbcb;
 
 // altura del header
 $header-height: 64px;
@@ -12,6 +12,7 @@ $header-height: 64px;
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -25,20 +26,18 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
-    box-shadow: 0 3px 10px rgba($color: $clr-primario, $alpha: 0.4);
-    border-bottom: 4px solid $clr-primario;
+    box-shadow: 0 3px 10px rgba($color: $color-primario, $alpha: 0.4);
+    //border-bottom: 4px solid $color-contraste;
 }
-
 
 // NAVBAR RESPONSIVE
 .navbar {
-    background-color: $clr-acento;
+    background-color: $color-acento;
 
     // Logo
     a {
         margin: 0;
         padding: 0;
-
 
         .logo {
             height: 40px;
@@ -57,14 +56,15 @@ header {
 
     // navbar desplegable
     .offcanvas {
-        background-color: $clr-acento;
+        background-color: $color-acento;
+        width: 330px;
 
         // boton de X
         .offcanvas-header {
 
             .btn-close {
                 font-size: 1.3em;
-                color: $clr-fondo;
+                color: $color-fondo;
                 margin-top: 5px;
                 margin-right: 5px;
             }
@@ -75,6 +75,7 @@ header {
             padding: 0;
 
             ul.navbar-nav {
+                margin: 0;
                 margin-bottom: 2em;
 
                 li.nav-item {
@@ -82,57 +83,52 @@ header {
                     a {
                         font-size: 1.3em;
                         padding: .6em 2em;
-                        color: $clr-primario;
+                        color: $color-primario;
                         font-weight: 500;
                     }
 
-
                     a:hover {
-                        background-color: rgba($color: $clr-primario, $alpha: 0.5);
-                        color: $clr-texto;
+                        background-color: rgba($color: $color-primario, $alpha: 0.7);
+                        color: $color-fondo;
                         transition: 0.1s ease;
                     }
 
                     a:active {
-                        background-color: $clr-primario;
-                        color: $clr-fondo;
+                        background-color: $color-primario;
+                        color: $color-fondo;
                     }
 
                     // Links con Dropdown
                     .dropdown-menu {
                         margin: .5em 2em;
                         padding: 2px;
-                        background-color: $clr-primario;
-                        border: 1px solid $clr-acento;
-
+                        border: none;
+                        background-color: $color-acento;
 
                         h6 {
                             font-size: 1.2em;
-                            color: $clr-acento;
+                            color: $color-fondo;
+                            background-color: rgba($color: $color-primario, $alpha: 0.5);
                             text-align: center;
                             margin: 5px;
+                            border-radius: 5px;
                         }
 
                         li {
-                            margin: 0;
-                            background-color: $clr-primario;
-
-
-                            .dropdown-divider {
-                                background-color: $clr-acento;
-                            }
+                            background-color: rgba($color-acento, $alpha: 1);
 
                             a.dropdown-item {
-                                color: $clr-fondo;
+                                color: $color-primario;
                             }
 
                             a.dropdown-item:hover {
-                                background-color: rgba($color: $clr-acento, $alpha: 0.5);
-                                color: $clr-texto;
+                                background-color: rgba($color: $color-primario, $alpha: 0.3);
+                                color: $color-texto;
                             }
 
                             a.dropdown-item:active {
-                                background-color: $clr-acento;
+                                background-color: $color-primario;
+                                color: $color-fondo;
                             }
                         }
                     }
@@ -149,7 +145,7 @@ main {
     // titulo
     h1.header {
         text-align: center;
-        color: $clr-primario;
+        color: $color-primario;
         font-weight: bolder;
         margin: .8em;
     }
@@ -164,9 +160,7 @@ main {
             height: 250px;
         }
     }
-}
 
-main {
 
     // card categories
     article {
@@ -175,13 +169,13 @@ main {
 
         .card-categories {
             width: 100%;
-            background-color: $clr-contraste;
+            background-color: $color-contraste;
             padding: .5em;
 
             h4 {
                 margin: 0;
                 text-align: center;
-                color: $clr-fondo;
+                color: $color-fondo;
             }
         }
 
@@ -192,44 +186,45 @@ main {
             align-items: center;
             gap: 10px;
             padding: 1em;
-            background-color: rgba($color: $clr-gris-claro, $alpha: 0.3);
-            border-bottom: 5px solid $clr-contraste;
+            background-color: rgba($color: $color-gris-claro, $alpha: 0.3);
+            border-bottom: 5px solid $color-contraste;
 
             // card individual 
             div.card {
                 display: flex;
                 flex-direction: column;
-                height: 240px;
+                height: 220px;
                 width: 95%;
                 border-radius: 10px;
-                background-color: $clr-acento;
-                box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: 0.2);
+                background-color: $color-acento;
+                box-shadow: 3px 5px 10px rgba($color: $color-texto, $alpha: 0.2);
                 margin: .5em 0;
 
                 // imagen thumbnail
                 .thumbnail {
-                    height: clamp(140px, 18vw, 200px);
+                    height: clamp(200px, 18vw, 200px);
                     overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
 
                     img {
-                        display: block;
                         width: 100%;
                         object-fit: cover;
-                        object-position: center;
                         align-self: center;
                         margin: 0;
-                        border-top-left-radius: 10px;
-                        border-top-right-radius: 10px;
                         height: auto;
+                        min-height: 180px;
                     }
                 }
 
                 // titulo del thumbnail
                 h5.card-header {
                     font-size: 1.2em;
-                    color: $clr-texto;
-                    margin: 5px;
-                    background-color: $clr-acento;
+                    color: $color-texto;
+                    margin: 2px;
+                    background-color: $color-acento;
                     border-style: none;
                     text-align: center;
                 }
@@ -241,33 +236,41 @@ main {
 
 
     // (SIDEBAR en desktop) Sobre el autor  
-    aside.sobre-el-autor {
-        background-color: #b6f3f1;
-        margin-top: 2em;
+    aside.about-author {
+        background-color: rgba($color: $color-gris-claro, $alpha: 0.3);
+        padding: 1.2rem;
 
-        h3 {
-            text-align: center;
-            color: $clr-primario;
-            margin: 0.5em;
-            font-size: 1.8em;
-        }
+        .about-author__card {
+            border-left: 5px solid $color-contraste;
+            padding-bottom: 5px;
+            box-shadow: 2px 5px 10px rgba($color: $color-gris-claro, $alpha: 0.5);
+            background-color: $color-fondo;
 
-        .foto-autor {
-            width: 70%;
-            align-items: center;
-            justify-self: center;
-
-            img {
-                width: 100%;
-                border-radius: 50%;
+            h3 {
+                text-align: center;
+                color: $color-contraste;
+                padding: 10px;
+                margin: 0 0 1rem 0;
+                font-size: 1.8em;
             }
-        }
 
-        .autor-texto {
-            margin: 2em 1em;
+            .about-author__img {
+                display: flex;
+                justify-content: center;
+                
+                img {
+                    width: clamp(50px, 60vw, 260px);
+                    box-shadow: 1px 3px 5px 1px $color-gris-claro;
+                    border-radius: 50%;
+                }
+            }
 
-            p {
-                text-align: justify;
+            .about-author__text {
+                margin: 1em;
+
+                p {
+                    text-align: justify;
+                }
             }
         }
     }
@@ -288,7 +291,7 @@ article .cards a {
         margin: 0;
 
         h5 {
-            background-color: $clr-acento;
+            background-color: $color-acento;
             border: none;
         }
     }
@@ -302,15 +305,15 @@ article .cards a {
 details.systems-skills-dropdown {
     margin: 2em 0;
     width: 100%;
-    background-color: rgba($color: $clr-gris-claro, $alpha: 0.5);
+    background-color: rgba($color: $color-gris-claro, $alpha: 0.5);
 
     // Header - Dropdown de Sistemas/Skills
     summary.dropdown-header {
         width: 100%;
         display: block;
         text-align: center;
-        color: $clr-fondo;
-        background-color: $clr-contraste;
+        color: $color-fondo;
+        background-color: $color-contraste;
         font-size: 1.5em;
         padding: 5px;
         font-weight: 500;
@@ -319,30 +322,30 @@ details.systems-skills-dropdown {
 
     .system-skill-body {
         padding: 2em;
-        border-bottom: 4px solid $clr-contraste;
+        border-bottom: 4px solid $color-contraste;
 
         .system-skill-drop {
-            background-color: $clr-fondo;
+            background-color: $color-fondo;
             margin: .75em 0;
-            box-shadow: 3px 5px 10px rgba($color: $clr-texto, $alpha: .1);
+            box-shadow: 3px 5px 10px rgba($color: $color-texto, $alpha: .1);
 
 
             summary {
-                background-color: $clr-acento;
+                background-color: $color-acento;
                 font-weight: 500;
-                color: $clr-texto;
+                color: $color-texto;
                 padding: 10px;
             }
 
             summary.disabled-dropdown {
-                color: $clr-gris-claro;
+                color: $color-gris-claro;
             }
 
             .system-skill-drop-body {
                 padding: 1em;
 
                 a {
-                    color: $clr-gris-claro;
+                    color: $color-gris-claro;
                 }
             }
         }
@@ -355,22 +358,22 @@ details.systems-skills-dropdown {
 .columns-headers {
 
     div {
-        background-color: $clr-gris-claro;
+        background-color: $color-gris-claro;
         border-radius: 20px;
-        
+
         h3 {
-            background-color: $clr-contraste;
-            color: $clr-fondo;
+            background-color: $color-contraste;
+            color: $color-fondo;
             text-align: center;
-            
+
         }
-        
+
         section {
             margin: 1em;
-            
-            
+
+
             .dropdown-card {
-                box-shadow: 1px 3px 10px $clr-texto;
+                box-shadow: 1px 3px 10px $color-texto;
                 border-radius: 20px;
                 display: flex;
                 flex-direction: column;
@@ -378,13 +381,13 @@ details.systems-skills-dropdown {
 
                 .thumbnail {
                     height: auto;
-                    
+
                     img {
                         border-top-left-radius: 20px;
                         border-top-right-radius: 20px;
                         width: 100%;
                         object-fit: cover;
-    
+
                     }
                 }
 
@@ -394,11 +397,11 @@ details.systems-skills-dropdown {
                     details {
 
                         summary {
-                            background-color: $clr-acento;
+                            background-color: $color-acento;
                             padding: 10px;
                             font-weight: bold;
                             font-size: 1.3em;
-                            box-shadow: 1px 5px 10px $clr-gris-claro;
+                            box-shadow: 1px 5px 10px $color-gris-claro;
                             text-align: center;
                             border-bottom-left-radius: 20px;
                             border-bottom-right-radius: 20px;
@@ -407,7 +410,7 @@ details.systems-skills-dropdown {
                         ul {
                             padding: 2em;
                         }
-                        
+
                     }
                 }
             }
@@ -425,23 +428,23 @@ details.systems-skills-dropdown {
 
     .table {
         width: 100%;
-        box-shadow: 3px 5px 20px $clr-gris-claro;
+        box-shadow: 3px 5px 20px $color-gris-claro;
         margin: 2em auto;
 
         th {
-            background-color: $clr-acento;
+            background-color: $color-acento;
         }
     }
 }
 
 
 .content-box {
-    background-color: $clr-acento;
+    background-color: $color-acento;
     margin: 3em 0;
 
     h2 {
-        background-color: $clr-primario;
-        color: $clr-fondo;
+        background-color: $color-primario;
+        color: $color-fondo;
         text-align: left;
         padding: 5px 1em;
     }
@@ -450,7 +453,7 @@ details.systems-skills-dropdown {
         padding: 1.5em;
 
         h3 {
-            color: $clr-primario;
+            color: $color-primario;
         }
     }
 
@@ -461,8 +464,8 @@ details.systems-skills-dropdown {
 //-----------------
 // FOOTER
 footer {
-    background-color: $clr-texto;
-    color: $clr-fondo;
+    background-color: $color-texto;
+    color: $color-fondo;
     text-align: center;
     padding: 1.5em;
 
@@ -491,35 +494,49 @@ footer {
 
             }
 
-            aside.sobre-el-autor {
-                display: flex;
-                flex-direction: column;
-                padding: 1em 2em 2em;
+            aside.about-author {
+                padding: 1em 1em 2em;
 
-                h3 {
-                    margin: 0.2em;
-                }
+                .about-author__card {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    grid-template-areas: 
+                    " photo header "
+                    " photo text";
+                    padding: 1rem;
 
-                .autor-foto-texto {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .foto-autor {
-                        width: 30%;
-                        align-content: center;
+                    h3 {
+                        margin: 0.2em;
+                        text-align: left;
+                        grid-area: header;
                     }
+    
+                    .about-author__img {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        grid-area: photo;
 
-                    .autor-texto {
-                        width: 65%;
-                        margin: 0;
+    
+                        img {
+                            width: clamp(30px, 35vw, 260px);
+                            align-content: center;
+                            margin-inline: .5rem;
+                        }
+    
+                    }
+                    .about-author__text {
+                        width: 95%;
+                        margin: 0 1rem;
+                        grid-area: text;
 
                         p {
                             margin: 5px 0 5px;
                         }
                     }
                 }
+
             }
         }
     }
@@ -529,7 +546,6 @@ footer {
 
 // LG SIZE en bootstrap 
 @media (min-width: 992px) {
-
 
 
     header {
@@ -551,41 +567,51 @@ footer {
 
                             a {
                                 padding: 0.8em 1em;
-                                color: $clr-primario;
+                                color: $color-primario;
                             }
 
                             a:hover {
-                                background-color: rgba($color: $clr-primario, $alpha: 0.5);
-                                color: $clr-texto;
+                                background-color: rgba($color: $color-primario, $alpha: .5);
+                                color: $color-fondo;
                                 transition: 0.1s ease;
                             }
 
                             a:active {
-                                background-color: $clr-primario;
-                                color: $clr-fondo;
+                                background-color: rgba($color: $color-primario, $alpha: 1);
+                                color: $color-fondo;
                             }
 
+                            // dropdown
                             ul.dropdown-menu {
-                                margin: .5em 0;
+                                margin: 0;
                                 padding: 2px;
-                                background-color: $clr-primario;
-                                border: 1px solid $clr-acento;
+
                                 width: 100%;
+                                box-shadow: 1px 5px 10px 1px rgba($color: $color-texto, $alpha: 0.3);
+
+                                h6 {
+                                    color: $color-fondo;
+                                    background-color: rgba($color: $color-primario, $alpha: .8);
+                                    padding: 5px 0;
+                                    border-radius: 5px;
+                                    font-size: 1rem;
+                                    font-weight: bold;
+                                }
 
                                 li {
 
                                     a.dropdown-item {
-                                        color: $clr-fondo;
+                                        color: $color-primario;
                                     }
 
                                     a.dropdown-item:hover {
-                                        background-color: rgba($color: $clr-acento, $alpha: 0.5);
-                                        color: $clr-texto;
-                                        color: $clr-texto;
+                                        background-color: rgba($color: $color-primario, $alpha: 0.3);
+                                        color: $color-texto;
                                     }
 
                                     a.dropdown-item:active {
-                                        background-color: $clr-acento;
+                                        background-color: $color-primario;
+                                        color: $color-fondo;
                                     }
                                 }
                             }
@@ -594,7 +620,18 @@ footer {
                 }
             }
         }
+
+        /* hover abre el dropdown en desktop */
+        .navbar .dropdown-hover:hover>.dropdown-menu,
+        .navbar .dropdown-hover:focus-within>.dropdown-menu {
+            display: block;
+        }
+
+        .navbar .dropdown-hover .dropdown-menu {
+            margin-top: 0;
+        }
     }
+
 
     main {
 
@@ -616,13 +653,10 @@ footer {
 
                             img {
                                 height: 100%;
-
                             }
                         }
-
                     }
                 }
-
             }
 
 
@@ -660,29 +694,35 @@ footer {
 
 
         // SIDEBAR - Sobre el Autor
-        aside.sobre-el-autor {
+        aside.about-author {
             margin-top: 0;
             display: block;
             height: auto;
+            padding: 2rem;
 
-            h3 {}
+            .about-author__card {
 
-            .autor-foto-texto {
-                display: contents;
-
-                .foto-autor {
-                    width: 70%;
-                    max-width: 250px;
+                h3 {
+                }
+                
+                .about-author__img {
+                    display: flex;
+                    justify-content: center;
+                    
+                    img {
+                        width: 70%;
+                        max-width: 250px;
+                    }
                 }
 
-                .autor-texto {
-                    text-align: justify;
-                    padding: 0 1.2em;
+                .about-author__text {
+                    padding: 0 .5em;
 
+                    p {
+                        text-align: left;
+                    }
                 }
             }
-
         }
     }
-
 }

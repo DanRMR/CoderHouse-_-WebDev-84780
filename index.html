@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <header>
         <!-- NAVBAR (Offcanvas - getbootstrap.com) -->
         <nav class="navbar navbar-expand-lg sticky-top py-lg-0">
@@ -42,14 +43,11 @@
                     <!-- links  -->
                     <div class="offcanvas-body">
 
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
 
-                            <!-- Dropdown de Systems -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="./systems.html" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Language Systems
-                                </a>
+                            <!-- Dropdown de Systems - DESKTOP -->
+                            <li class="nav-item dropdown dropdown-hover d-block">
+                                <a class="nav-link" href="./systems.html">Language Systems</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="./systems.html#pronunciation">Pronunciation</a>
                                     </li>
@@ -57,18 +55,15 @@
                                     <li><a class="dropdown-item" href="./systems.html#grammar">Grammar</a></li>
                                 </ul>
                             </li>
-                            <!-- Dropdwon de Skills  -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="./skills.html" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    English Skills
-                                </a>
+
+                            <!-- Dropdwon de Skills - DESKTOP -->
+                            <li class="nav-item dropdown dropdown-hover d-block">
+                                <a class="nav-link" href="./skills.html">English Skills</a>
                                 <ul class="dropdown-menu">
                                     <h6 class="skills">Receptive Skills</h6>
                                     <li><a class="dropdown-item" href="./skills.html#listening">Listening</a></li>
                                     <li><a class="dropdown-item" href="./skills.html#reading">Reading</a></li>
                                     <li>
-                                        <hr class="dropdown-divider">
                                     </li>
                                     <h6 class="skills">Productive Skills</h6>
                                     <li><a class="dropdown-item" href="./skills.html#speaking">Speaking</a></li>
@@ -113,6 +108,7 @@
                             simples,
                             recursos confiables y explicaciones claras.</p>
                     </div>
+
                     <div class="bloque-texto">
                         <h3>¿Para quién es este sitio?</h3>
                         <ul>
@@ -124,6 +120,7 @@
                             <li>Profesores que quieran recomendar recursos a sus alumnos</li>
                         </ul>
                     </div>
+
                     <div class="bloque-texto">
                         <h3>Cómo usar este Sitio</h3>
                         <p>Este sitio está dividido en Systems y Skills:</p>
@@ -135,59 +132,60 @@
                             <h4>Language Systems</h4>
                         </div>
                         <div class="cards cards-systems-flex">
+                            <a href="systems.html#vocabulary">
                             <div class="card">
                                 <div class="thumbnail">
                                     <img src="./img/vocabulary.png" alt="thumbnail-vocabulary">
                                 </div>
                                 <h5 class="card-header">Vocabulary</h5>
-                            </div>
-                            <div class="card">
+                            </div></a>
+                            <a href="systems.html#pronunciation"><div class="card">
                                 <div class="thumbnail">
                                     <img src="./img/Pronunciation.png" alt="thumbnail-pronunciation">
                                 </div>
                                 <h5 class="card-header">Pronunciation</h5>
-                            </div>
-                            <div class="card">
+                            </div></a>
+                            <a href="systems.html#grammar"><div class="card">
                                 <div class="thumbnail">
                                     <img src="./img/Grammar.png" alt="thumbnail-grammar">
                                 </div>
                                 <h5 class="card-header">Grammar</h5>
-                            </div>
+                            </div></a>
                         </div>
                     </article>
 
                     <!-- English Skills -->
                     <article>
-                        
+
                         <div class="card-categories">
                             <h4>Language Systems</h4>
                         </div>
 
                         <div class="cards cards-skills-grid">
-                            <div class="card reading">
+                            <a href="skills.html#reading"><div class="card reading">
                                 <div class="thumbnail">
                                     <img src="./img/Reading.png" alt="thumbnail-reading">
                                 </div>
-                                <h5  class="card-header">Reading</h5>
-                            </div>
-                            <div class="card listening">
+                                <h5 class="card-header">Reading</h5>
+                            </div></a>
+                            <a href="skills.html#listening"><div class="card listening">
                                 <div class="thumbnail">
                                     <img src="./img/Listening.png" alt="thumbnail-listening">
                                 </div>
-                                <h5  class="card-header">Listening</h5>
-                            </div>
-                            <div class="card listening">
+                                <h5 class="card-header">Listening</h5>
+                            </div></a>
+                            <a href="skills.html#speaking"><div class="card speaking">
                                 <div class="thumbnail">
                                     <img src="./img/Speaking.png" alt="thumbnail-speaking">
                                 </div>
-                                <h5  class="card-header">Speaking</h5>
-                            </div>
-                            <div class="card writing">
+                                <h5 class="card-header">Speaking</h5>
+                            </div></a>
+                            <a href="skills.html#writing"><div class="card writing">
                                 <div class="thumbnail">
                                     <img src="./img/Writing.png" alt="thumbnail-writing">
                                 </div>
-                                <h5  class="card-header">Writing</h5>
-                            </div>
+                                <h5 class="card-header">Writing</h5>
+                            </div></a>
                         </div>
                     </article>
 
@@ -221,13 +219,13 @@
             </section>
 
             <!-- Sobre el Autor (Sidebar) -->
-            <aside class="sobre-el-autor col-sm-12 col-lg-3">
-                <h3>Sobre el autor</h3>
-                <div class="autor-foto-texto">
-                    <div class="foto-autor">
+            <aside class="about-author col-sm-12 col-lg-3">
+                <div class="about-author__card">
+                    <h3>Sobre el autor</h3>
+                    <div class="about-author__img">
                         <img src="./img/foto-autor.jpg" alt="foto del autor">
                     </div>
-                    <div class="autor-texto">
+                    <div class="about-author__text">
                         <p>Soy Daniel Molina, apasionado por los idiomas y el aprendizaje autodidacta. Creé este sitio
                             porque, cuando empecé a aprender inglés, me habría encantado tener un recurso así: claro,
                             ordenado y sin distracciones</p>
@@ -246,7 +244,7 @@
 
     <footer>
         <p>© 2025 Learn English Hub </p>
-        <p><b>Coderhouse: Entrega 3 — Molina Rubio</b></p>
+        <p><b>Coderhouse: Entrega Final — Molina Rubio</b></p>
     </footer>
 </body>
 
