@@ -317,7 +317,7 @@ details.systems-skills-dropdown {
         font-size: 1.4em;
         padding: .25rem 2rem;
         font-weight: 500;
-        
+
         &::before {
             content: "⯈";
             transition: transform .25s ease;
@@ -325,6 +325,7 @@ details.systems-skills-dropdown {
         }
 
     }
+
     &[open] .dropdown-header::before {
         transform: rotate(90deg);
     }
@@ -333,8 +334,22 @@ details.systems-skills-dropdown {
     .system-skill-body {
         padding: 2em;
         border-bottom: 4px solid $color-contraste;
-        background-color: rebeccapurple;
+        background-color: $color-gris-claro;
 
+        //hoja de respuestas
+        ol {
+            margin: 1rem 0;
+
+            li {
+                line-height: 1.65;
+
+                b {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        // dropdown de secciones
         .system-skill-drop {
             background-color: $color-fondo;
             margin: .75em 0;
@@ -346,23 +361,77 @@ details.systems-skills-dropdown {
                 font-weight: 500;
                 color: $color-texto;
                 padding: .5rem 1rem;
-                
+
             }
 
             summary.disabled-dropdown {
                 color: $color-gris-claro;
             }
 
+            // Estilo de preguntas
             .system-skill-drop-body {
-                padding: 1em;
-                
+                padding: 2rem;
 
-                a {
-                    color: $color-gris-claro;
+                fieldset {
+                    margin-bottom: 1.5rem;
+                    border: 3px solid $color-acento;
+                    padding: .5rem;
+                    position: relative;
+
+                    legend {
+                        position: absolute;
+                        background-color: $color-acento;
+                        display: block;
+                        width: 120px;
+                        text-align: center;
+                        color: $color-fondo;
+                        right: 20px;
+                        top: -12px;
+                        border-radius: 5px;
+
+                        span {
+                            color: $color-primario;
+                        }
+                    }
+
+                    .question {
+                        margin: 2rem 1rem;
+
+                        h4 {
+                            margin-bottom: 1rem;
+                        }
+
+                        .italic {
+                            font-style: italic;
+                        }
+
+                        select {
+                            margin: 1rem .5rem 0;
+                            width: auto;
+                        }
+
+                        label {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: .5rem;
+                            margin-right: 1rem;
+                            cursor: pointer;
+
+                            input {
+                                cursor: pointer;
+
+                            }
+                        }
+                    }
                 }
             }
         }
     }
+}
+
+// tabla para escribir las respuestas correctas
+.score-chart table td input {
+            text-align: center;
 }
 
 // ----- dropdowns de recursos.html -------

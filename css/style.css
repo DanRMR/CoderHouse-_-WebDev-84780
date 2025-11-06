@@ -248,7 +248,16 @@ details.systems-skills-dropdown[open] .dropdown-header::before {
 details.systems-skills-dropdown .system-skill-body {
   padding: 2em;
   border-bottom: 4px solid #FF7D53;
-  background-color: rebeccapurple;
+  background-color: #cbcbcb;
+}
+details.systems-skills-dropdown .system-skill-body ol {
+  margin: 1rem 0;
+}
+details.systems-skills-dropdown .system-skill-body ol li {
+  line-height: 1.65;
+}
+details.systems-skills-dropdown .system-skill-body ol li b {
+  margin-left: 1rem;
 }
 details.systems-skills-dropdown .system-skill-body .system-skill-drop {
   background-color: #fff;
@@ -265,10 +274,54 @@ details.systems-skills-dropdown .system-skill-body .system-skill-drop summary.di
   color: #cbcbcb;
 }
 details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body {
-  padding: 1em;
+  padding: 2rem;
 }
-details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body a {
-  color: #cbcbcb;
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset {
+  margin-bottom: 1.5rem;
+  border: 3px solid #b6f3f1;
+  padding: 0.5rem;
+  position: relative;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset legend {
+  position: absolute;
+  background-color: #b6f3f1;
+  display: block;
+  width: 120px;
+  text-align: center;
+  color: #fff;
+  right: 20px;
+  top: -12px;
+  border-radius: 5px;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset legend span {
+  color: #0A998D;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset .question {
+  margin: 2rem 1rem;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset .question h4 {
+  margin-bottom: 1rem;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset .question .italic {
+  font-style: italic;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset .question select {
+  margin: 1rem 0.5rem 0;
+  width: auto;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset .question label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-skill-drop-body fieldset .question label input {
+  cursor: pointer;
+}
+
+.score-chart table td input {
+  text-align: center;
 }
 
 .column-resources {
