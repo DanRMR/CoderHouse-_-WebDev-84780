@@ -310,15 +310,25 @@ details.systems-skills-dropdown {
     // Header - Dropdown de Sistemas/Skills
     summary.dropdown-header {
         width: 100%;
-        display: block;
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
         color: $color-fondo;
         background-color: $color-contraste;
-        font-size: 1.5em;
-        padding: 5px;
+        font-size: 1.4em;
+        padding: .25rem 2rem;
         font-weight: 500;
+        
+        &::before {
+            content: "⯈";
+            transition: transform .25s ease;
+            order: 2;
+        }
 
     }
+    &[open] .dropdown-header::before {
+        transform: rotate(90deg);
+    }
+
 
     .system-skill-body {
         padding: 2em;
@@ -334,7 +344,8 @@ details.systems-skills-dropdown {
                 background-color: $color-acento;
                 font-weight: 500;
                 color: $color-texto;
-                padding: 10px;
+                padding: .5rem 1rem;
+                
             }
 
             summary.disabled-dropdown {
@@ -350,13 +361,13 @@ details.systems-skills-dropdown {
             }
         }
     }
-
 }
 
-// ----- cards de recursos.html -------
+// ----- dropdowns de recursos.html -------
 
 .column-resources {
-    margin: 0;
+    margin: .5rem 0;
+    padding: 0;
 
     .column-resources__header {
         background-color: $color-contraste;
@@ -375,9 +386,8 @@ details.systems-skills-dropdown {
         min-height: 200; // differente en desktop
 
         .dropdown-resources {
-            box-shadow: 1px 3px 10px $color-texto;
+            box-shadow: 0px 2px 10px rgba($color: $color-primario, $alpha: 0.4);
             background-color: $color-acento;
-            overflow: hidden;
 
             details {
                 height: 100%;
@@ -407,23 +417,25 @@ details.systems-skills-dropdown {
                     transform: rotate(90deg);
                 }
 
+
                 .dropdown-resources__thumbnail {
                     height: auto;
-                    border-bottom: 10px solid $color-primario;
 
                     img {
+                        border-bottom: 10px solid $color-acento;
+                        box-shadow: 0px 10px 15px -5px $color-primario;
                         width: 100%;
+                        max-height: 280px;
                         object-fit: cover;
-                        box-shadow: 0px 3px 10px $color-gris-claro;
                     }
                 }
 
                 .dropdown-resources__body {
-                    background-color: red;
+                    background-color: $color-fondo;
                     margin: 0;
                     padding: 2rem 3rem;
                     font-size: 1rem; // differente en desktop
-                    line-height: 1; // differente en desktop
+                    line-height: 1.4; // differente en desktop
                 }
             }
         }
@@ -459,7 +471,7 @@ details.systems-skills-dropdown {
         background-color: $color-primario;
         color: $color-fondo;
         text-align: left;
-        padding: 5px 1em;
+        padding: 1rem;
     }
 
     div {
@@ -474,7 +486,7 @@ details.systems-skills-dropdown {
 
     li {
         font-size: 1.2rem;
-        line-height: 2;
+        line-height: 1.4;
     }
 
 }
@@ -746,72 +758,25 @@ footer {
         }
     }
 
+    /* Columnas de Resources.html */
     .column-resources {
-        margin: 0;
 
         .column-resources__header {
-            background-color: $color-contraste;
-            color: $color-fondo;
-            text-align: center;
             font-size: 1.75rem;
-            margin: 0;
-            padding: 10px;
         }
 
         .column-resources__column {
-            display: grid;
-            background-color: $color-gris-claro;
-            padding: 1rem;
-            gap: 1rem;
             min-height: 300px;
 
             .dropdown-resources {
-                box-shadow: 1px 3px 10px $color-texto;
-                background-color: $color-acento;
-                overflow: hidden;
 
                 details {
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    min-height: 0;
-
 
                     .dropdown-resources__header {
-                        height: 100%;
-                        font-weight: bold;
                         font-size: 1.5em;
-                        text-align: center;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: .5rem 2rem;
-
-                        &::after {
-                            content: "⯈";
-                            transition: transform .25s ease;
-                            font-size: 1.5rem;
-                        }
-                    }
-
-                    &[open] .dropdown-resources__header::after {
-                        transform: rotate(90deg);
-                    }
-
-                    .dropdown-resources__thumbnail {
-                        height: auto;
-                        border-bottom: 10px solid $color-primario;
-
-                        img {
-                            width: 100%;
-                            object-fit: cover;
-                            box-shadow: 0px 3px 10px $color-gris-claro;
-                        }
                     }
 
                     .dropdown-resources__body {
-                        margin: 0;
-                        padding: 2rem 3rem;
                         font-size: 1.2rem;
                         line-height: 1.5;
                     }
@@ -819,5 +784,4 @@ footer {
             }
         }
     }
-
 }
