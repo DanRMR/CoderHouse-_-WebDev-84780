@@ -248,6 +248,7 @@ details.systems-skills-dropdown[open] .dropdown-header::before {
 details.systems-skills-dropdown .system-skill-body {
   padding: 2em;
   border-bottom: 4px solid #FF7D53;
+  background-color: rebeccapurple;
 }
 details.systems-skills-dropdown .system-skill-body .system-skill-drop {
   background-color: #fff;
@@ -287,7 +288,7 @@ details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-sk
   background-color: #cbcbcb;
   padding: 1rem;
   gap: 1rem;
-  min-height: 200;
+  min-height: 200px;
 }
 .column-resources .column-resources__column .dropdown-resources {
   box-shadow: 0px 2px 10px rgba(10, 153, 141, 0.4);
@@ -375,6 +376,11 @@ details.systems-skills-dropdown .system-skill-body .system-skill-drop .system-sk
   line-height: 1.4;
 }
 
+.autoeval-quiz {
+  background-color: red !important;
+}
+
+/* ----------------- FOOTER --------------- */
 footer {
   background-color: #1F2A37;
   color: #fff;
@@ -532,6 +538,9 @@ footer p {
     text-align: left;
   }
   /* Columnas de Resources.html */
+  .column-resources {
+    padding: 0.3rem;
+  }
   .column-resources .column-resources__header {
     font-size: 1.75rem;
   }

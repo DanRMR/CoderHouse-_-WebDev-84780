@@ -333,6 +333,7 @@ details.systems-skills-dropdown {
     .system-skill-body {
         padding: 2em;
         border-bottom: 4px solid $color-contraste;
+        background-color: rebeccapurple;
 
         .system-skill-drop {
             background-color: $color-fondo;
@@ -354,6 +355,7 @@ details.systems-skills-dropdown {
 
             .system-skill-drop-body {
                 padding: 1em;
+                
 
                 a {
                     color: $color-gris-claro;
@@ -383,7 +385,7 @@ details.systems-skills-dropdown {
         background-color: $color-gris-claro;
         padding: 1rem;
         gap: 1rem;
-        min-height: 200; // differente en desktop
+        min-height: 200px; // differente en desktop
 
         .dropdown-resources {
             box-shadow: 0px 2px 10px rgba($color: $color-primario, $alpha: 0.4);
@@ -491,10 +493,12 @@ details.systems-skills-dropdown {
 
 }
 
-.dos-columnas {}
 
-//-----------------
-// FOOTER
+.autoeval-quiz {
+    background-color: red !important; // prueba
+}
+
+/* ----------------- FOOTER --------------- */
 footer {
     background-color: $color-texto;
     color: $color-fondo;
@@ -722,6 +726,7 @@ footer {
                 }
 
             }
+
         }
 
 
@@ -760,6 +765,7 @@ footer {
 
     /* Columnas de Resources.html */
     .column-resources {
+        padding: .3rem;
 
         .column-resources__header {
             font-size: 1.75rem;
