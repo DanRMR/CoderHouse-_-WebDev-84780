@@ -1,7 +1,7 @@
 // Colores
 $color-primario: #0A998D;
 $color-acento: #b6f3f1;
-$color-contraste: #FF7D53 ; //#F16A70
+$color-contraste: #FF7D53; //#F16A70
 $color-fondo: #fff;
 $color-texto: #1F2A37;
 $color-gris-claro: #cbcbcb;
@@ -257,7 +257,7 @@ main {
             .about-author__img {
                 display: flex;
                 justify-content: center;
-                
+
                 img {
                     width: clamp(50px, 60vw, 260px);
                     box-shadow: 1px 3px 5px 1px $color-gris-claro;
@@ -355,63 +355,75 @@ details.systems-skills-dropdown {
 
 // ----- cards de recursos.html -------
 
-.columns-headers {
+.column-resources {
+    margin: 0;
 
-    div {
+    .column-resources__header {
+        background-color: $color-contraste;
+        color: $color-fondo;
+        text-align: center;
+        font-size: 1.3rem; // differente en desktop
+        margin: 0;
+        padding: 10px;
+    }
+
+    .column-resources__column {
+        display: grid;
         background-color: $color-gris-claro;
-        border-radius: 20px;
+        padding: 1rem;
+        gap: 1rem;
+        min-height: 200; // differente en desktop
 
-        h3 {
-            background-color: $color-contraste;
-            color: $color-fondo;
-            text-align: center;
+        .dropdown-resources {
+            box-shadow: 1px 3px 10px $color-texto;
+            background-color: $color-acento;
+            overflow: hidden;
 
-        }
-
-        section {
-            margin: 1em;
-
-
-            .dropdown-card {
-                box-shadow: 1px 3px 10px $color-texto;
-                border-radius: 20px;
+            details {
+                height: 100%;
                 display: flex;
                 flex-direction: column;
+                min-height: 0;
 
 
-                .thumbnail {
-                    height: auto;
+                .dropdown-resources__header {
+                    height: 100%;
+                    font-weight: bold;
+                    font-size: 1.2em; // differente en desktop
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: .5rem 2rem;
 
-                    img {
-                        border-top-left-radius: 20px;
-                        border-top-right-radius: 20px;
-                        width: 100%;
-                        object-fit: cover;
-
+                    &::after {
+                        content: "⯈";
+                        transition: transform .25s ease;
+                        font-size: 1.2rem; // differente en desktop
                     }
                 }
 
-                .dropdown-card-body {
-                    background-color: white;
+                &[open] .dropdown-resources__header::after {
+                    transform: rotate(90deg);
+                }
 
-                    details {
+                .dropdown-resources__thumbnail {
+                    height: auto;
+                    border-bottom: 10px solid $color-primario;
 
-                        summary {
-                            background-color: $color-acento;
-                            padding: 10px;
-                            font-weight: bold;
-                            font-size: 1.3em;
-                            box-shadow: 1px 5px 10px $color-gris-claro;
-                            text-align: center;
-                            border-bottom-left-radius: 20px;
-                            border-bottom-right-radius: 20px;
-                        }
-
-                        ul {
-                            padding: 2em;
-                        }
-
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        box-shadow: 0px 3px 10px $color-gris-claro;
                     }
+                }
+
+                .dropdown-resources__body {
+                    background-color: red;
+                    margin: 0;
+                    padding: 2rem 3rem;
+                    font-size: 1rem; // differente en desktop
+                    line-height: 1; // differente en desktop
                 }
             }
         }
@@ -439,9 +451,10 @@ details.systems-skills-dropdown {
 
 
 .content-box {
-    background-color: $color-acento;
+    background-color: $color-gris-claro;
     margin: 3em 0;
 
+    /* --- Autoevaluacion.html ----*/
     h2 {
         background-color: $color-primario;
         color: $color-fondo;
@@ -455,6 +468,13 @@ details.systems-skills-dropdown {
         h3 {
             color: $color-primario;
         }
+    }
+
+    /* --- recursos.html ----- */
+
+    li {
+        font-size: 1.2rem;
+        line-height: 2;
     }
 
 }
@@ -500,9 +520,9 @@ footer {
                 .about-author__card {
                     display: grid;
                     grid-template-columns: 1fr 2fr;
-                    grid-template-areas: 
-                    " photo header "
-                    " photo text";
+                    grid-template-areas:
+                        " photo header "
+                        " photo text";
                     padding: 1rem;
 
                     h3 {
@@ -510,7 +530,7 @@ footer {
                         text-align: left;
                         grid-area: header;
                     }
-    
+
                     .about-author__img {
                         display: flex;
                         flex-direction: row;
@@ -518,14 +538,15 @@ footer {
                         align-items: center;
                         grid-area: photo;
 
-    
+
                         img {
                             width: clamp(30px, 35vw, 260px);
                             align-content: center;
                             margin-inline: .5rem;
                         }
-    
+
                     }
+
                     .about-author__text {
                         width: 95%;
                         margin: 0 1rem;
@@ -702,13 +723,12 @@ footer {
 
             .about-author__card {
 
-                h3 {
-                }
-                
+                h3 {}
+
                 .about-author__img {
                     display: flex;
                     justify-content: center;
-                    
+
                     img {
                         width: 70%;
                         max-width: 250px;
@@ -725,4 +745,79 @@ footer {
             }
         }
     }
+
+    .column-resources {
+        margin: 0;
+
+        .column-resources__header {
+            background-color: $color-contraste;
+            color: $color-fondo;
+            text-align: center;
+            font-size: 1.75rem;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .column-resources__column {
+            display: grid;
+            background-color: $color-gris-claro;
+            padding: 1rem;
+            gap: 1rem;
+            min-height: 300px;
+
+            .dropdown-resources {
+                box-shadow: 1px 3px 10px $color-texto;
+                background-color: $color-acento;
+                overflow: hidden;
+
+                details {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 0;
+
+
+                    .dropdown-resources__header {
+                        height: 100%;
+                        font-weight: bold;
+                        font-size: 1.5em;
+                        text-align: center;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: .5rem 2rem;
+
+                        &::after {
+                            content: "⯈";
+                            transition: transform .25s ease;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    &[open] .dropdown-resources__header::after {
+                        transform: rotate(90deg);
+                    }
+
+                    .dropdown-resources__thumbnail {
+                        height: auto;
+                        border-bottom: 10px solid $color-primario;
+
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            box-shadow: 0px 3px 10px $color-gris-claro;
+                        }
+                    }
+
+                    .dropdown-resources__body {
+                        margin: 0;
+                        padding: 2rem 3rem;
+                        font-size: 1.2rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+
 }
